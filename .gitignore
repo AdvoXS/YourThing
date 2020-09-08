@@ -13,7 +13,6 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.nar
 *.ear
@@ -51,6 +50,8 @@
 .idea/**/libraries
 /.gradle
 
+#Tomcat
+/target
 #Intellij IDEA
 out/
 build/
