@@ -1,1 +1,1 @@
-web: java -jar libs/webapp-runner.jar build/libs/YuorThings-1.0-SNAPSHOT.war $PORT
+web: java $JAVA_OPTS -jar libs/webapp-runner.jar --port $PORT build/libs/YuorThings-1.0-SNAPSHOT.war
