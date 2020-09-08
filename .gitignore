@@ -51,6 +51,7 @@
 .idea/**/gradle.xml
 .idea/**/libraries
 /.gradle
+/gradle
 
 #Intellij IDEA
 out/
