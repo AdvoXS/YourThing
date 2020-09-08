@@ -6,4 +6,4 @@
 3. Выбрать файл build.gradle для открытия внутри проекта и далее нажать "Открыть как проект";
 4. Сверху найти "Add configuration" и нажать
 5. Слева сверху в окне нажимаем "+" и выбираем Application
-![Настройки Debug/Run Intellij Application](https://ibb.co/BNm8v1z)
+[Настройки Debug/Run Intellij Application](https://ibb.co/BNm8v1z)
