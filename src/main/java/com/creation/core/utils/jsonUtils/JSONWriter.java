@@ -8,6 +8,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ *  @Author Borisov Ivan
+ *  @Date 07.09.2020
+ */
 public class JSONWriter extends JSONFile {
 
     public JSONWriter(String fileName) {

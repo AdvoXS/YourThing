@@ -9,6 +9,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
+ * @Author Borisov Ivan
  * Core class
  * Класс предназначен для считывания данных из JSON файла
  */

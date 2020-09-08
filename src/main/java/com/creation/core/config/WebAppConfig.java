@@ -4,6 +4,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
@@ -11,8 +13,8 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 // Включаем MVC
 @EnableWebMvc
 // Указываем где искать контроллеры
-@ComponentScan("com.creation.controllers.rest")
-public class WebAppConfig {
+@ComponentScan("com.creation.controllers")
+public class WebAppConfig implements WebMvcConfigurer {
 
     @Bean
     public UrlBasedViewResolver setupViewResolver() {
@@ -24,4 +26,9 @@ public class WebAppConfig {
         return resolver;
     }
 
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+    }
 }

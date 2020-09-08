@@ -10,6 +10,11 @@ import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ *  @Author Borisov Ivan
+ *  @Date 07.09.2020
+ */
+
 public class PropertyXMLProcessor {
     private static final String propertyURL = "./src/main/resources/project_properties.xml";
     private static final SAXParserFactory factory = SAXParserFactory.newInstance();

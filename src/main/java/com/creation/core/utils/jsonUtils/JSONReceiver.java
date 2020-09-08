@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
+/**
+ * @Author Borisov Ivan
+ * @Date 07.09.2020
+ */
 public class JSONReceiver extends JSONReader {
     public JSONReceiver(String fileName) {
         super(fileName);

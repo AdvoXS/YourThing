@@ -1,6 +1,9 @@
 package com.creation;
 
-public class Main {
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+public class Main implements WebMvcConfigurer {
     public static void main(String [] args){
       /*  JSONWriter jWriter = new JSONWriter("test");
         HashMap<String, Object> params = new HashMap<>();
