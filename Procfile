@@ -1,1 +1,1 @@
-web: java -jar libs/webapp-runner-8.5.11.3.jar build/libs/YuorThings-1.0-SNAPSHOT.war
+web: java -Dserver.port=$PORT -jar libs/webapp-runner-8.5.11.3.jar build/libs/YuorThings-1.0-SNAPSHOT.war
