@@ -5,5 +5,5 @@
 2. Запустить Intellij IDEA Ultimate и нажать открыть проект;
 3. Выбрать файл build.gradle для открытия внутри проекта и далее нажать "Открыть как проект";
 4. Сверху найти "Add configuration" и нажать
-5. Слева сверху в окне нажимаем "+" и выбираем Application [Пример настроек Application](https://ibb.co/BNm8v1z)
+5. Слева сверху в окне нажимаем "+" и выбираем Application [(пример настроек Application)](https://ibb.co/BNm8v1z)
 
