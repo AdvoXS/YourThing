@@ -26,7 +26,7 @@ public class JSONReceiverTest {
         jReceiver = new JSONReceiver("test");
     }
 
-    @Test
+    /*@Test
     public void whenTakeArrayWhenArrayIsMissing() throws Exception {
         ArrayList<String> params = new ArrayList<>();
         params.add("name");
@@ -41,5 +41,5 @@ public class JSONReceiverTest {
         catch (Exception e){
             throw new Exception("Попытка чтения неопределенного массива из JSON");
         }
-    }
+    }*/
 }
