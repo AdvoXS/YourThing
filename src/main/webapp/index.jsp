@@ -12,7 +12,7 @@
     <div id="like_button_container"></div>
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-    <script src="/resources/js/like_button.js"></script>
+    <script src="resources/js/like_button.js"></script>
 
   </body>
 </html>
