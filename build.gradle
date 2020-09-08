@@ -16,5 +16,22 @@ dependencies {
     compile group: 'org.springframework', name: 'spring-beans', version: '5.2.8.RELEASE'
     compile group: 'org.springframework', name: 'spring-webmvc', version: '5.2.8.RELEASE'
     compile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
-    compile group: 'javax.servlet.jsp.jstl', name: 'jstl', version: '1.2'
+}
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
+
+task copyToLib(type: Copy) {
+    into "$buildDir/libs"
+    from(configurations.compile)
+}
+
+stage.dependsOn(copyToLib)
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Jar File Example',
+                'Main-Class': 'com.creation.Application'
+    }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
 }

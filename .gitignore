@@ -21,7 +21,6 @@
 *.tar.gz
 *.rar
 
-<<<<<<< HEAD
 # Intellij
 .idea/
 *.iml
@@ -51,7 +50,6 @@
 .idea/**/gradle.xml
 .idea/**/libraries
 /.gradle
-/gradle
 
 #Intellij IDEA
 out/

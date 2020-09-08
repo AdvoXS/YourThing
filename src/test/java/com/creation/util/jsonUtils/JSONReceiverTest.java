@@ -1,9 +1,6 @@
 package com.creation.util.jsonUtils;
 
-<<<<<<< HEAD
-=======
 import com.creation.core.utils.jsonUtils.JSONReceiver;
->>>>>>> 28199a0... #2 rework
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Rule;
