@@ -19,13 +19,7 @@ public class PropertyXMLProcessor {
     static {
         try {
             parser = factory.newSAXParser();
-<<<<<<< HEAD
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-=======
         } catch (ParserConfigurationException | SAXException e) {
->>>>>>> 28199a0... #2 rework
             e.printStackTrace();
         }
     }
@@ -42,11 +36,7 @@ public class PropertyXMLProcessor {
         } catch (Exception ignored) {
 
         }
-<<<<<<< HEAD
         return "";
-=======
-        return new String();
->>>>>>> 28199a0... #2 rework
 
     }
 
@@ -88,20 +78,12 @@ public class PropertyXMLProcessor {
         }
 
         @Override
-<<<<<<< HEAD
         public void startElement(String uri, String localName, String qName, Attributes attributes) {
-=======
-        public void startElement(String uri, String localName, String qName, Attributes attributes){
->>>>>>> 28199a0... #2 rework
             findProperty = attributes.getValue("key");
         }
 
         @Override
-<<<<<<< HEAD
         public void characters(char[] ch, int start, int length) {
-=======
-        public void characters(char[] ch, int start, int length){
->>>>>>> 28199a0... #2 rework
             if (get(findProperty))
                 value = new String(ch, start, length);
         }

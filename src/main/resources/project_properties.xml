@@ -3,9 +3,4 @@
 <properties>
     <entry key="path.json.files">./vol/JSON/</entry>
     <entry key="path.java.files">./vol/Java/</entry>
-    <!--<entry key="db.pass">masterkey</entry>
-    <entry key="db.user">postgres</entry>
-    <entry key="db.pass">masterkey</entry>
-    <entry key="db.name">COMPOUND_MAIN</entry>
-    <entry key="db.url">127.0.0.1:5432</entry>-->
 </properties>
