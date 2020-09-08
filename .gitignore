@@ -56,7 +56,6 @@
 #Intellij IDEA
 out/
 build/
->>>>>>> 28199a0... #2 rework
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
