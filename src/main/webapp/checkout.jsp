@@ -6,13 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="aStar Fashion Template Project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.3/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/resources/styles/bootstrap-4.1.3/bootstrap.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="styles/checkout.css">
-<link rel="stylesheet" type="text/css" href="styles/checkout_responsive.css">
+<link rel="stylesheet" type="text/css" href="/resources/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="/resources/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="/resources/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="/resources/styles/checkout.css">
+<link rel="stylesheet" type="text/css" href="/resources/styles/checkout_responsive.css">
 </head>
 <body>
 
@@ -48,26 +48,26 @@
 
 				<!-- Language -->
 				<div class="info_languages has_children">
-					<div class="language_flag"><img src="images/flag_1.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+					<div class="language_flag"><img src="/resources/images/flag_1.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 					<div class="dropdown_text">english</div>
 					<div class="dropdown_arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
 					
 					<!-- Language Dropdown Menu -->
 					 <ul>
 					 	<li><a href="#">
-				 			<div class="language_flag"><img src="images/flag_2.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				 			<div class="language_flag"><img src="/resources/images/flag_2.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 							<div class="dropdown_text">french</div>
 					 	</a></li>
 					 	<li><a href="#">
-				 			<div class="language_flag"><img src="images/flag_3.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				 			<div class="language_flag"><img src="/resources/images/flag_3.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 							<div class="dropdown_text">japanese</div>
 					 	</a></li>
 					 	<li><a href="#">
-				 			<div class="language_flag"><img src="images/flag_4.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				 			<div class="language_flag"><img src="/resources/images/flag_4.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 							<div class="dropdown_text">russian</div>
 					 	</a></li>
 					 	<li><a href="#">
-				 			<div class="language_flag"><img src="images/flag_5.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				 			<div class="language_flag"><img src="/resources/images/flag_5.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 							<div class="dropdown_text">spanish</div>
 					 	</a></li>
 					 </ul>
@@ -92,7 +92,7 @@
 				<!-- Cart -->
 				<div class="cart d-flex flex-row align-items-center justify-content-start">
 					<div class="cart_icon"><a href="cart.jsp">
-						<img src="images/bag.png" alt="">
+						<img src="/resources/images/bag.png" alt="">
 						<div class="cart_num">2</div>
 					</a></div>
 				</div>
@@ -110,26 +110,26 @@
 
 			<!-- Language -->
 			<div class="info_languages has_children">
-				<div class="language_flag"><img src="images/flag_1.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				<div class="language_flag"><img src="/resources/images/flag_1.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 				<div class="dropdown_text">english</div>
 				<div class="dropdown_arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
 				
 				<!-- Language Dropdown Menu -->
 				 <ul>
 				 	<li><a href="#">
-			 			<div class="language_flag"><img src="images/flag_2.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+			 			<div class="language_flag"><img src="/resources/images/flag_2.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 						<div class="dropdown_text">french</div>
 				 	</a></li>
 				 	<li><a href="#">
-			 			<div class="language_flag"><img src="images/flag_3.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+			 			<div class="language_flag"><img src="/resources/images/flag_3.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 						<div class="dropdown_text">japanese</div>
 				 	</a></li>
 				 	<li><a href="#">
-			 			<div class="language_flag"><img src="images/flag_4.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+			 			<div class="language_flag"><img src="/resources/images/flag_4.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 						<div class="dropdown_text">russian</div>
 				 	</a></li>
 				 	<li><a href="#">
-			 			<div class="language_flag"><img src="images/flag_5.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+			 			<div class="language_flag"><img src="/resources/images/flag_5.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 						<div class="dropdown_text">spanish</div>
 				 	</a></li>
 				 </ul>
@@ -192,26 +192,26 @@
 				
 				<!-- Language -->
 				<div class="info_languages has_children">
-					<div class="language_flag"><img src="images/flag_1.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+					<div class="language_flag"><img src="/resources/images/flag_1.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 					<div class="dropdown_text">english</div>
 					<div class="dropdown_arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
 					
 					<!-- Language Dropdown Menu -->
 					 <ul>
 					 	<li><a href="#">
-				 			<div class="language_flag"><img src="images/flag_2.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				 			<div class="language_flag"><img src="/resources/images/flag_2.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 							<div class="dropdown_text">french</div>
 					 	</a></li>
 					 	<li><a href="#">
-				 			<div class="language_flag"><img src="images/flag_3.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				 			<div class="language_flag"><img src="/resources/images/flag_3.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 							<div class="dropdown_text">japanese</div>
 					 	</a></li>
 					 	<li><a href="#">
-				 			<div class="language_flag"><img src="images/flag_4.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				 			<div class="language_flag"><img src="/resources/images/flag_4.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 							<div class="dropdown_text">russian</div>
 					 	</a></li>
 					 	<li><a href="#">
-				 			<div class="language_flag"><img src="images/flag_5.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				 			<div class="language_flag"><img src="/resources/images/flag_5.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 							<div class="dropdown_text">spanish</div>
 					 	</a></li>
 					 </ul>
@@ -264,7 +264,7 @@
 		<!-- Cart -->
 		<div class="cart d-flex flex-row align-items-center justify-content-start">
 			<div class="cart_icon"><a href="cart.jsp">
-				<img src="images/bag.png" alt="">
+				<img src="/resources/images/bag.png" alt="">
 				<div class="cart_num">2</div>
 			</a></div>
 			<div class="cart_text">bag</div>
@@ -275,7 +275,7 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/checkout.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="/resources/images/checkout.jpg" data-speed="0.8"></div>
 		<div class="home_container">
 			<div class="home_content">
 				<div class="home_title">Checkout</div>
@@ -462,7 +462,7 @@
 	<!-- Newsletter -->
 
 	<div class="newsletter">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="/resources/images/newsletter.jpg" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2">
@@ -503,11 +503,11 @@
 								</div>
 								<div class="cards">
 									<ul class="d-flex flex-row align-items-center justify-content-start">
-										<li><a href="#"><img src="images/card_1.jpg" alt=""></a></li>
-										<li><a href="#"><img src="images/card_2.jpg" alt=""></a></li>
-										<li><a href="#"><img src="images/card_3.jpg" alt=""></a></li>
-										<li><a href="#"><img src="images/card_4.jpg" alt=""></a></li>
-										<li><a href="#"><img src="images/card_5.jpg" alt=""></a></li>
+										<li><a href="#"><img src="/resources/images/card_1.jpg" alt=""></a></li>
+										<li><a href="#"><img src="/resources/images/card_2.jpg" alt=""></a></li>
+										<li><a href="#"><img src="/resources/images/card_3.jpg" alt=""></a></li>
+										<li><a href="#"><img src="/resources/images/card_4.jpg" alt=""></a></li>
+										<li><a href="#"><img src="/resources/images/card_5.jpg" alt=""></a></li>
 									</ul>
 								</div>
 							</div>
@@ -543,7 +543,7 @@
 
 									<!-- Blog Item -->
 									<div class="footer_blog_item d-flex flex-row align-items-start justify-content-start">
-										<div class="footer_blog_image"><a href="blog.jsp"><img src="images/footer_blog_1.jpg" alt=""></a></div>
+										<div class="footer_blog_image"><a href="blog.jsp"><img src="/resources/images/footer_blog_1.jpg" alt=""></a></div>
 										<div class="footer_blog_content">
 											<div class="footer_blog_title"><a href="blog.jsp">what shoes to wear</a></div>
 											<div class="footer_blog_date">june 06, 2018</div>
@@ -553,7 +553,7 @@
 
 									<!-- Blog Item -->
 									<div class="footer_blog_item d-flex flex-row align-items-start justify-content-start">
-										<div class="footer_blog_image"><a href="blog.jsp"><img src="images/footer_blog_2.jpg" alt=""></a></div>
+										<div class="footer_blog_image"><a href="blog.jsp"><img src="/resources/images/footer_blog_2.jpg" alt=""></a></div>
 										<div class="footer_blog_content">
 											<div class="footer_blog_title"><a href="blog.jsp">trends this year</a></div>
 											<div class="footer_blog_date">june 06, 2018</div>
@@ -667,17 +667,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 </div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap-4.1.3/popper.js"></script>
-<script src="styles/bootstrap-4.1.3/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/checkout.js"></script>
+<script src="/resources/js/jquery-3.2.1.min.js"></script>
+<script src="/resources/styles/bootstrap-4.1.3/popper.js"></script>
+<script src="/resources/styles/bootstrap-4.1.3/bootstrap.min.js"></script>
+<script src="/resources/plugins/greensock/TweenMax.min.js"></script>
+<script src="/resources/plugins/greensock/TimelineMax.min.js"></script>
+<script src="/resources/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="/resources/plugins/greensock/animation.gsap.min.js"></script>
+<script src="/resources/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="/resources/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="/resources/plugins/easing/easing.js"></script>
+<script src="/resources/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="/resources/js/checkout.js"></script>
 </body>
 </html>

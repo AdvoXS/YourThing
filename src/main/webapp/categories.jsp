@@ -8,11 +8,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.3/bootstrap.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="styles/categories.css">
-<link rel="stylesheet" type="text/css" href="styles/categories_responsive.css">
+<link rel="stylesheet" type="text/css" href="/resources/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="/resources/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="/resources/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="/resources/styles/categories.css">
+<link rel="stylesheet" type="text/css" href="/resources/styles/categories_responsive.css">
 </head>
 <body>
 
@@ -48,26 +48,26 @@
 
 				<!-- Language -->
 				<div class="info_languages has_children">
-					<div class="language_flag"><img src="images/flag_1.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+					<div class="language_flag"><img src="/resources/images/flag_1.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 					<div class="dropdown_text">english</div>
 					<div class="dropdown_arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
 					
 					<!-- Language Dropdown Menu -->
 					 <ul>
 					 	<li><a href="#">
-				 			<div class="language_flag"><img src="images/flag_2.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				 			<div class="language_flag"><img src="/resources/images/flag_2.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 							<div class="dropdown_text">french</div>
 					 	</a></li>
 					 	<li><a href="#">
-				 			<div class="language_flag"><img src="images/flag_3.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				 			<div class="language_flag"><img src="/resources/images/flag_3.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 							<div class="dropdown_text">japanese</div>
 					 	</a></li>
 					 	<li><a href="#">
-				 			<div class="language_flag"><img src="images/flag_4.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				 			<div class="language_flag"><img src="/resources/images/flag_4.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 							<div class="dropdown_text">russian</div>
 					 	</a></li>
 					 	<li><a href="#">
-				 			<div class="language_flag"><img src="images/flag_5.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				 			<div class="language_flag"><img src="/resources/images/flag_5.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 							<div class="dropdown_text">spanish</div>
 					 	</a></li>
 					 </ul>
@@ -92,7 +92,7 @@
 				<!-- Cart -->
 				<div class="cart d-flex flex-row align-items-center justify-content-start">
 					<div class="cart_icon"><a href="cart.jsp">
-						<img src="images/bag.png" alt="">
+						<img src="/resources/images/bag.png" alt="">
 						<div class="cart_num">2</div>
 					</a></div>
 				</div>
@@ -110,26 +110,26 @@
 
 			<!-- Language -->
 			<div class="info_languages has_children">
-				<div class="language_flag"><img src="images/flag_1.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				<div class="language_flag"><img src="/resources/images/flag_1.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 				<div class="dropdown_text">english</div>
 				<div class="dropdown_arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
 				
 				<!-- Language Dropdown Menu -->
 				 <ul>
 				 	<li><a href="#">
-			 			<div class="language_flag"><img src="images/flag_2.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+			 			<div class="language_flag"><img src="/resources/images/flag_2.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 						<div class="dropdown_text">french</div>
 				 	</a></li>
 				 	<li><a href="#">
-			 			<div class="language_flag"><img src="images/flag_3.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+			 			<div class="language_flag"><img src="/resources/images/flag_3.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 						<div class="dropdown_text">japanese</div>
 				 	</a></li>
 				 	<li><a href="#">
-			 			<div class="language_flag"><img src="images/flag_4.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+			 			<div class="language_flag"><img src="/resources/images/flag_4.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 						<div class="dropdown_text">russian</div>
 				 	</a></li>
 				 	<li><a href="#">
-			 			<div class="language_flag"><img src="images/flag_5.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+			 			<div class="language_flag"><img src="/resources/images/flag_5.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 						<div class="dropdown_text">spanish</div>
 				 	</a></li>
 				 </ul>
@@ -192,26 +192,26 @@
 				
 				<!-- Language -->
 				<div class="info_languages has_children">
-					<div class="language_flag"><img src="images/flag_1.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+					<div class="language_flag"><img src="/resources/images/flag_1.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 					<div class="dropdown_text">english</div>
 					<div class="dropdown_arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
 					
 					<!-- Language Dropdown Menu -->
 					 <ul>
 					 	<li><a href="#">
-				 			<div class="language_flag"><img src="images/flag_2.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				 			<div class="language_flag"><img src="/resources/images/flag_2.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 							<div class="dropdown_text">french</div>
 					 	</a></li>
 					 	<li><a href="#">
-				 			<div class="language_flag"><img src="images/flag_3.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				 			<div class="language_flag"><img src="/resources/images/flag_3.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 							<div class="dropdown_text">japanese</div>
 					 	</a></li>
 					 	<li><a href="#">
-				 			<div class="language_flag"><img src="images/flag_4.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				 			<div class="language_flag"><img src="/resources/images/flag_4.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 							<div class="dropdown_text">russian</div>
 					 	</a></li>
 					 	<li><a href="#">
-				 			<div class="language_flag"><img src="images/flag_5.svg" alt="https://www.flaticon.com/authors/freepik"></div>
+				 			<div class="language_flag"><img src="/resources/images/flag_5.svg" alt="https://www.flaticon.com/authors/freepik"></div>
 							<div class="dropdown_text">spanish</div>
 					 	</a></li>
 					 </ul>
@@ -264,7 +264,7 @@
 		<!-- Cart -->
 		<div class="cart d-flex flex-row align-items-center justify-content-start">
 			<div class="cart_icon"><a href="cart.jsp">
-				<img src="images/bag.png" alt="">
+				<img src="/resources/images/bag.png" alt="">
 				<div class="cart_num">2</div>
 			</a></div>
 			<div class="cart_text">bag</div>
@@ -275,7 +275,7 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/categories.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="/resources/images/categories.jpg" data-speed="0.8"></div>
 		<div class="home_container">
 			<div class="home_content">
 				<div class="home_title">Shop</div>
@@ -319,9 +319,9 @@
 										</ul>
 									</div>
 									<div class="product_view d-flex flex-row align-items-center justify-content-start">
-										<div class="view_item active"><img src="images/view_1.png" alt=""></div>
-										<div class="view_item"><img src="images/view_2.png" alt=""></div>
-										<div class="view_item"><img src="images/view_3.png" alt=""></div>
+										<div class="view_item active"><img src="/resources/images/view_1.png" alt=""></div>
+										<div class="view_item"><img src="/resources/images/view_2.png" alt=""></div>
+										<div class="view_item"><img src="/resources/images/view_3.png" alt=""></div>
 									</div>
 									<div class="products_dropdown text-right product_dropdown_filter">
 										<div class="isotope_filter_text"><span>Filter</span><i class="fa fa-caret-down" aria-hidden="true"></i></div>
@@ -349,7 +349,7 @@
 							<div class="product grid-item hot">
 								<div class="product_inner">
 									<div class="product_image">
-										<img src="images/product_1.jpg" alt="">
+										<img src="/resources/images/product_1.jpg" alt="">
 										<div class="product_tag">hot</div>
 									</div>
 									<div class="product_content text-center">
@@ -363,7 +363,7 @@
 							<!-- Product -->
 							<div class="product grid-item">
 								<div class="product_inner">
-									<div class="product_image"><img src="images/product_2.jpg" alt=""></div>
+									<div class="product_image"><img src="/resources/images/product_2.jpg" alt=""></div>
 									<div class="product_content text-center">
 										<div class="product_title"><a href="product.html">hype grey shirt</a></div>
 										<div class="product_price">$19.50</div>
@@ -376,7 +376,7 @@
 							<div class="product grid-item sale">
 								<div class="product_inner">
 									<div class="product_image">
-										<img src="images/product_3.jpg" alt="">
+										<img src="/resources/images/product_3.jpg" alt="">
 										<div class="product_tag">sale</div>
 									</div>
 									<div class="product_content text-center">
@@ -391,7 +391,7 @@
 							<div class="product grid-item">
 								<div class="product_inner">
 									<div class="product_image">
-										<img src="images/product_4.jpg" alt="">
+										<img src="/resources/images/product_4.jpg" alt="">
 									</div>
 									<div class="product_content text-center">
 										<div class="product_title"><a href="product.html">denim men shirt</a></div>
@@ -405,7 +405,7 @@
 							<div class="product grid-item">
 								<div class="product_inner">
 									<div class="product_image">
-										<img src="images/product_5.jpg" alt="">
+										<img src="/resources/images/product_5.jpg" alt="">
 									</div>
 									<div class="product_content text-center">
 										<div class="product_title"><a href="product.html">long red shirt</a></div>
@@ -419,7 +419,7 @@
 							<div class="product grid-item new">
 								<div class="product_inner">
 									<div class="product_image">
-										<img src="images/product_6.jpg" alt="">
+										<img src="/resources/images/product_6.jpg" alt="">
 										<div class="product_tag">new</div>
 									</div>
 									<div class="product_content text-center">
@@ -434,7 +434,7 @@
 							<div class="product grid-item">
 								<div class="product_inner">
 									<div class="product_image">
-										<img src="images/product_7.jpg" alt="">
+										<img src="/resources/images/product_7.jpg" alt="">
 									</div>
 									<div class="product_content text-center">
 										<div class="product_title"><a href="product.html">long sleeve jacket</a></div>
@@ -448,7 +448,7 @@
 							<div class="product grid-item sale">
 								<div class="product_inner">
 									<div class="product_image">
-										<img src="images/product_8.jpg" alt="">
+										<img src="/resources/images/product_8.jpg" alt="">
 										<div class="product_tag">sale</div>
 									</div>
 									<div class="product_content text-center">
@@ -463,7 +463,7 @@
 							<div class="product grid-item hot">
 								<div class="product_inner">
 									<div class="product_image">
-										<img src="images/product_9.jpg" alt="">
+										<img src="/resources/images/product_9.jpg" alt="">
 										<div class="product_tag">hot</div>
 									</div>
 									<div class="product_content text-center">
@@ -477,7 +477,7 @@
 							<!-- Product -->
 							<div class="product grid-item">
 								<div class="product_inner">
-									<div class="product_image"><img src="images/product_10.jpg" alt=""></div>
+									<div class="product_image"><img src="/resources/images/product_10.jpg" alt=""></div>
 									<div class="product_content text-center">
 										<div class="product_title"><a href="product.html">hype grey shirt</a></div>
 										<div class="product_price">$19.50</div>
@@ -490,7 +490,7 @@
 							<div class="product grid-item sale">
 								<div class="product_inner">
 									<div class="product_image">
-										<img src="images/product_11.jpg" alt="">
+										<img src="/resources/images/product_11.jpg" alt="">
 										<div class="product_tag">sale</div>
 									</div>
 									<div class="product_content text-center">
@@ -505,7 +505,7 @@
 							<div class="product grid-item">
 								<div class="product_inner">
 									<div class="product_image">
-										<img src="images/product_12.jpg" alt="">
+										<img src="/resources/images/product_12.jpg" alt="">
 									</div>
 									<div class="product_content text-center">
 										<div class="product_title"><a href="product.html">denim men shirt</a></div>
@@ -519,7 +519,7 @@
 							<div class="product grid-item hot">
 								<div class="product_inner">
 									<div class="product_image">
-										<img src="images/product_13.jpg" alt="">
+										<img src="/resources/images/product_13.jpg" alt="">
 										<div class="product_tag">hot</div>
 									</div>
 									<div class="product_content text-center">
@@ -534,7 +534,7 @@
 							<div class="product grid-item new">
 								<div class="product_inner">
 									<div class="product_image">
-										<img src="images/product_14.jpg" alt="">
+										<img src="/resources/images/product_14.jpg" alt="">
 										<div class="product_tag">new</div>
 									</div>
 									<div class="product_content text-center">
@@ -549,7 +549,7 @@
 							<div class="product grid-item sale">
 								<div class="product_inner">
 									<div class="product_image">
-										<img src="images/product_15.jpg" alt="">
+										<img src="/resources/images/product_15.jpg" alt="">
 										<div class="product_tag">sale</div>
 									</div>
 									<div class="product_content text-center">
@@ -564,7 +564,7 @@
 							<div class="product grid-item">
 								<div class="product_inner">
 									<div class="product_image">
-										<img src="images/product_16.jpg" alt="">
+										<img src="/resources/images/product_16.jpg" alt="">
 									</div>
 									<div class="product_content text-center">
 										<div class="product_title"><a href="product.html">denim men shirt</a></div>
@@ -584,7 +584,7 @@
 	<!-- Newsletter -->
 
 	<div class="newsletter">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/newsletter.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="/resources/images/newsletter.jpg" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2">
@@ -625,11 +625,11 @@
 								</div>
 								<div class="cards">
 									<ul class="d-flex flex-row align-items-center justify-content-start">
-										<li><a href="#"><img src="images/card_1.jpg" alt=""></a></li>
-										<li><a href="#"><img src="images/card_2.jpg" alt=""></a></li>
-										<li><a href="#"><img src="images/card_3.jpg" alt=""></a></li>
-										<li><a href="#"><img src="images/card_4.jpg" alt=""></a></li>
-										<li><a href="#"><img src="images/card_5.jpg" alt=""></a></li>
+										<li><a href="#"><img src="/resources/images/card_1.jpg" alt=""></a></li>
+										<li><a href="#"><img src="/resources/images/card_2.jpg" alt=""></a></li>
+										<li><a href="#"><img src="/resources/images/card_3.jpg" alt=""></a></li>
+										<li><a href="#"><img src="/resources/images/card_4.jpg" alt=""></a></li>
+										<li><a href="#"><img src="/resources/images/card_5.jpg" alt=""></a></li>
 									</ul>
 								</div>
 							</div>
@@ -665,7 +665,7 @@
 
 									<!-- Blog Item -->
 									<div class="footer_blog_item d-flex flex-row align-items-start justify-content-start">
-										<div class="footer_blog_image"><a href="blog.jsp"><img src="images/footer_blog_1.jpg" alt=""></a></div>
+										<div class="footer_blog_image"><a href="blog.jsp"><img src="/resources/images/footer_blog_1.jpg" alt=""></a></div>
 										<div class="footer_blog_content">
 											<div class="footer_blog_title"><a href="blog.jsp">what shoes to wear</a></div>
 											<div class="footer_blog_date">june 06, 2018</div>
@@ -675,7 +675,7 @@
 
 									<!-- Blog Item -->
 									<div class="footer_blog_item d-flex flex-row align-items-start justify-content-start">
-										<div class="footer_blog_image"><a href="blog.jsp"><img src="images/footer_blog_2.jpg" alt=""></a></div>
+										<div class="footer_blog_image"><a href="blog.jsp"><img src="/resources/images/footer_blog_2.jpg" alt=""></a></div>
 										<div class="footer_blog_content">
 											<div class="footer_blog_title"><a href="blog.jsp">trends this year</a></div>
 											<div class="footer_blog_date">june 06, 2018</div>
@@ -789,19 +789,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 </div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap-4.1.3/popper.js"></script>
-<script src="styles/bootstrap-4.1.3/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
-<script src="plugins/Isotope/fitcolumns.js"></script>
-<script src="js/categories.js"></script>
+<script src="/resources/js/jquery-3.2.1.min.js"></script>
+<script src="/resources/styles/bootstrap-4.1.3/popper.js"></script>
+<script src="/resources/styles/bootstrap-4.1.3/bootstrap.min.js"></script>
+<script src="/resources/plugins/greensock/TweenMax.min.js"></script>
+<script src="/resources/plugins/greensock/TimelineMax.min.js"></script>
+<script src="/resources/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="/resources/plugins/greensock/animation.gsap.min.js"></script>
+<script src="/resources/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="/resources/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="/resources/plugins/easing/easing.js"></script>
+<script src="/resources/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="/resources/plugins/Isotope/isotope.pkgd.min.js"></script>
+<script src="/resources/plugins/Isotope/fitcolumns.js"></script>
+<script src="/resources/js/categories.js"></script>
 </body>
 </html>
