@@ -91,7 +91,7 @@
 
 				<!-- Cart -->
 				<div class="cart d-flex flex-row align-items-center justify-content-start">
-					<div class="cart_icon"><a href="cart.html">
+					<div class="cart_icon"><a href="cart.jsp">
 						<img src="images/bag.png" alt="">
 						<div class="cart_num">2</div>
 					</a></div>
@@ -166,7 +166,7 @@
 				<li class="menu_mm"><a href="#">woman</a></li>
 				<li class="menu_mm"><a href="#">man</a></li>
 				<li class="menu_mm"><a href="#">lookbook</a></li>
-				<li class="menu_mm"><a href="blog.html">blog</a></li>
+				<li class="menu_mm"><a href="blog.jsp">blog</a></li>
 				<li class="menu_mm"><a href="contact.html">contact</a></li>
 			</ul>
 		</nav>
@@ -248,7 +248,7 @@
 				<li><a href="#">woman<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				<li><a href="#">man<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				<li><a href="#">lookbook<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-				<li><a href="blog.html">blog<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li><a href="blog.jsp">blog<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				<li><a href="#">contact<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 			</ul>
 		</nav>
@@ -263,7 +263,7 @@
 
 		<!-- Cart -->
 		<div class="cart d-flex flex-row align-items-center justify-content-start">
-			<div class="cart_icon"><a href="cart.html">
+			<div class="cart_icon"><a href="cart.jsp">
 				<img src="images/bag.png" alt="">
 				<div class="cart_num">2</div>
 			</a></div>
@@ -665,21 +665,21 @@
 
 									<!-- Blog Item -->
 									<div class="footer_blog_item d-flex flex-row align-items-start justify-content-start">
-										<div class="footer_blog_image"><a href="blog.html"><img src="images/footer_blog_1.jpg" alt=""></a></div>
+										<div class="footer_blog_image"><a href="blog.jsp"><img src="images/footer_blog_1.jpg" alt=""></a></div>
 										<div class="footer_blog_content">
-											<div class="footer_blog_title"><a href="blog.html">what shoes to wear</a></div>
+											<div class="footer_blog_title"><a href="blog.jsp">what shoes to wear</a></div>
 											<div class="footer_blog_date">june 06, 2018</div>
-											<div class="footer_blog_link"><a href="blog.html">Read More</a></div>
+											<div class="footer_blog_link"><a href="blog.jsp">Read More</a></div>
 										</div>
 									</div>
 
 									<!-- Blog Item -->
 									<div class="footer_blog_item d-flex flex-row align-items-start justify-content-start">
-										<div class="footer_blog_image"><a href="blog.html"><img src="images/footer_blog_2.jpg" alt=""></a></div>
+										<div class="footer_blog_image"><a href="blog.jsp"><img src="images/footer_blog_2.jpg" alt=""></a></div>
 										<div class="footer_blog_content">
-											<div class="footer_blog_title"><a href="blog.html">trends this year</a></div>
+											<div class="footer_blog_title"><a href="blog.jsp">trends this year</a></div>
 											<div class="footer_blog_date">june 06, 2018</div>
-											<div class="footer_blog_link"><a href="blog.html">Read More</a></div>
+											<div class="footer_blog_link"><a href="blog.jsp">Read More</a></div>
 										</div>
 									</div>
 

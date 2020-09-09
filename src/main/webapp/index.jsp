@@ -91,7 +91,7 @@
 
 				<!-- Cart -->
 				<div class="cart d-flex flex-row align-items-center justify-content-start">
-					<div class="cart_icon"><a href="cart.html">
+					<div class="cart_icon"><a href="cart.jsp">
 						<img src="/resources/images/bag.png" alt="">
 						<div class="cart_num">2</div>
 					</a></div>
@@ -166,7 +166,7 @@
 				<li class="menu_mm"><a href="#">woman</a></li>
 				<li class="menu_mm"><a href="#">man</a></li>
 				<li class="menu_mm"><a href="#">lookbook</a></li>
-				<li class="menu_mm"><a href="blog.html">blog</a></li>
+				<li class="menu_mm"><a href="blog.jsp">blog</a></li>
 				<li class="menu_mm"><a href="contact.html">contact</a></li>
 			</ul>
 		</nav>
@@ -248,7 +248,7 @@
 				<li><a href="#">woman<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				<li><a href="#">man<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				<li><a href="#">lookbook<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-				<li><a href="blog.html">blog<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li><a href="blog.jsp">blog<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				<li><a href="#">contact<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 			</ul>
 		</nav>
@@ -263,7 +263,7 @@
 
 		<!-- Cart -->
 		<div class="cart d-flex flex-row align-items-center justify-content-start">
-			<div class="cart_icon"><a href="cart.html">
+			<div class="cart_icon"><a href="cart.jsp">
 				<img src="/resources/images/bag.png" alt="">
 				<div class="cart_num">2</div>
 			</a></div>
@@ -290,7 +290,7 @@
 								<div class="home_discount_text">Discount on the</div>
 							</div>
 							<div class="home_title">New Collection</div>
-							<div class="button button_1 home_button trans_200"><a href="categories.html">Shop NOW!</a></div>
+							<div class="button button_1 home_button trans_200"><a href="categories.jsp">Shop NOW!</a></div>
 						</div>
 					</div>
 				</div>
@@ -305,7 +305,7 @@
 								<div class="home_discount_text">Discount on the</div>
 							</div>
 							<div class="home_title">New Collection</div>
-							<div class="button button_1 home_button trans_200"><a href="categories.html">Shop NOW!</a></div>
+							<div class="button button_1 home_button trans_200"><a href="categories.jsp">Shop NOW!</a></div>
 						</div>
 					</div>
 				</div>
@@ -320,7 +320,7 @@
 								<div class="home_discount_text">Discount on the</div>
 							</div>
 							<div class="home_title">New Collection</div>
-							<div class="button button_1 home_button trans_200"><a href="categories.html">Shop NOW!</a></div>
+							<div class="button button_1 home_button trans_200"><a href="categories.jsp">Shop NOW!</a></div>
 						</div>
 					</div>
 				</div>
@@ -345,7 +345,7 @@
 					<div class="col-lg-4 box_col">
 						<div class="box">
 							<div class="box_image"><img src="/resources/images/box_1.jpg" alt=""></div>
-							<div class="box_title trans_200"><a href="categories.html">summer collection</a></div>
+							<div class="box_title trans_200"><a href="categories.jsp">summer collection</a></div>
 						</div>
 					</div>
 
@@ -353,7 +353,7 @@
 					<div class="col-lg-4 box_col">
 						<div class="box">
 							<div class="box_image"><img src="/resources/images/box_2.jpg" alt=""></div>
-							<div class="box_title trans_200"><a href="categories.html">eyewear collection</a></div>
+							<div class="box_title trans_200"><a href="categories.jsp">eyewear collection</a></div>
 						</div>
 					</div>
 
@@ -361,7 +361,7 @@
 					<div class="col-lg-4 box_col">
 						<div class="box">
 							<div class="box_image"><img src="/resources/images/box_3.jpg" alt=""></div>
-							<div class="box_title trans_200"><a href="categories.html">basic pieces</a></div>
+							<div class="box_title trans_200"><a href="categories.jsp">basic pieces</a></div>
 						</div>
 					</div>
 
@@ -379,9 +379,9 @@
 					<div class="col text-center">
 						<div class="categories_list_container">
 							<ul class="categories_list d-flex flex-row align-items-center justify-content-start">
-								<li><a href="categories.html">new arrivals</a></li>
-								<li><a href="categories.html">recommended</a></li>
-								<li><a href="categories.html">best sellers</a></li>
+								<li><a href="categories.jsp">new arrivals</a></li>
+								<li><a href="categories.jsp">recommended</a></li>
+								<li><a href="categories.jsp">best sellers</a></li>
 							</ul>
 						</div>
 					</div>
@@ -604,21 +604,21 @@
 
 									<!-- Blog Item -->
 									<div class="footer_blog_item d-flex flex-row align-items-start justify-content-start">
-										<div class="footer_blog_image"><a href="blog.html"><img src="/resources/images/footer_blog_1.jpg" alt=""></a></div>
+										<div class="footer_blog_image"><a href="blog.jsp"><img src="/resources/images/footer_blog_1.jpg" alt=""></a></div>
 										<div class="footer_blog_content">
-											<div class="footer_blog_title"><a href="blog.html">what shoes to wear</a></div>
+											<div class="footer_blog_title"><a href="blog.jsp">what shoes to wear</a></div>
 											<div class="footer_blog_date">june 06, 2018</div>
-											<div class="footer_blog_link"><a href="blog.html">Read More</a></div>
+											<div class="footer_blog_link"><a href="blog.jsp">Read More</a></div>
 										</div>
 									</div>
 
 									<!-- Blog Item -->
 									<div class="footer_blog_item d-flex flex-row align-items-start justify-content-start">
-										<div class="footer_blog_image"><a href="blog.html"><img src="/resources/images/footer_blog_2.jpg" alt=""></a></div>
+										<div class="footer_blog_image"><a href="blog.jsp"><img src="/resources/images/footer_blog_2.jpg" alt=""></a></div>
 										<div class="footer_blog_content">
-											<div class="footer_blog_title"><a href="blog.html">trends this year</a></div>
+											<div class="footer_blog_title"><a href="blog.jsp">trends this year</a></div>
 											<div class="footer_blog_date">june 06, 2018</div>
-											<div class="footer_blog_link"><a href="blog.html">Read More</a></div>
+											<div class="footer_blog_link"><a href="blog.jsp">Read More</a></div>
 										</div>
 									</div>
 

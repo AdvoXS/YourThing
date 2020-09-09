@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Checkout</title>
+<title>Blog</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="aStar Fashion Template Project">
@@ -11,8 +11,8 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="styles/checkout.css">
-<link rel="stylesheet" type="text/css" href="styles/checkout_responsive.css">
+<link rel="stylesheet" type="text/css" href="styles/blog.css">
+<link rel="stylesheet" type="text/css" href="styles/blog_responsive.css">
 </head>
 <body>
 
@@ -91,7 +91,7 @@
 
 				<!-- Cart -->
 				<div class="cart d-flex flex-row align-items-center justify-content-start">
-					<div class="cart_icon"><a href="cart.html">
+					<div class="cart_icon"><a href="cart.jsp">
 						<img src="images/bag.png" alt="">
 						<div class="cart_num">2</div>
 					</a></div>
@@ -166,7 +166,7 @@
 				<li class="menu_mm"><a href="#">woman</a></li>
 				<li class="menu_mm"><a href="#">man</a></li>
 				<li class="menu_mm"><a href="#">lookbook</a></li>
-				<li class="menu_mm"><a href="blog.html">blog</a></li>
+				<li class="menu_mm"><a href="blog.jsp">blog</a></li>
 				<li class="menu_mm"><a href="contact.html">contact</a></li>
 			</ul>
 		</nav>
@@ -248,7 +248,7 @@
 				<li><a href="#">woman<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				<li><a href="#">man<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				<li><a href="#">lookbook<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-				<li><a href="blog.html">blog<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li><a href="blog.jsp">blog<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 				<li><a href="#">contact<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 			</ul>
 		</nav>
@@ -263,7 +263,7 @@
 
 		<!-- Cart -->
 		<div class="cart d-flex flex-row align-items-center justify-content-start">
-			<div class="cart_icon"><a href="cart.html">
+			<div class="cart_icon"><a href="cart.jsp">
 				<img src="images/bag.png" alt="">
 				<div class="cart_num">2</div>
 			</a></div>
@@ -275,184 +275,108 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/checkout.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/blog.jpg" data-speed="0.8"></div>
 		<div class="home_container">
 			<div class="home_content">
-				<div class="home_title">Checkout</div>
+				<div class="home_title">The Blog</div>
 				<div class="breadcrumbs">
 					<ul class="d-flex flex-row align-items-center justify-content-start">
 						<li><a href="index.jsp">Home</a></li>
-						<li><a href="cart.html">Your Cart</a></li>
-						<li>Checkout</li>
+						<li>Blog</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- Checkout -->
+	<!-- Blog -->
 
-	<div class="checkout">
+	<div class="blog">
 		<div class="section_container">
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<div class="checkout_container d-flex flex-xxl-row flex-column align-items-start justify-content-start">
+						
+						<!-- Blog Posts -->
+						<div class="blog_bosts">
 							
-							<!-- Billing -->
-							<div class="billing checkout_box">
-								<div class="checkout_title">Billing Address</div>
-								<div class="checkout_form_container">
-									<form action="#" id="checkout_form" class="checkout_form">
-										<div class="row">
-											<div class="col-lg-6">
-												<!-- Name -->
-												<label for="checkout_name">First Name*</label>
-												<input type="text" id="checkout_name" class="checkout_input" required="required">
-											</div>
-											<div class="col-lg-6">
-												<!-- Last Name -->
-												<label for="checkout_last_name">Last Name*</label>
-												<input type="text" id="checkout_last_name" class="checkout_input" required="required">
-											</div>
-										</div>
-										<div>
-											<!-- Company -->
-											<label for="checkout_company">Company</label>
-											<input type="text" id="checkout_company" class="checkout_input">
-										</div>
-										<div>
-											<!-- Country -->
-											<label for="checkout_country">Country*</label>
-											<select name="checkout_country" id="checkout_country" class="dropdown_item_select checkout_input" require="required">
-												<option></option>
-												<option>Lithuania</option>
-												<option>Sweden</option>
-												<option>UK</option>
-												<option>Italy</option>
-											</select>
-										</div>
-										<div>
-											<!-- Address -->
-											<label for="checkout_address">Address*</label>
-											<input type="text" id="checkout_address" class="checkout_input" required="required">
-											<input type="text" id="checkout_address_2" class="checkout_input checkout_address_2" required="required">
-										</div>
-										<div>
-											<!-- Zipcode -->
-											<label for="checkout_zipcode">Zipcode*</label>
-											<input type="text" id="checkout_zipcode" class="checkout_input" required="required">
-										</div>
-										<div>
-											<!-- City / Town -->
-											<label for="checkout_city">City/Town*</label>
-											<select name="checkout_city" id="checkout_city" class="dropdown_item_select checkout_input" require="required">
-												<option></option>
-												<option>City</option>
-												<option>City</option>
-												<option>City</option>
-												<option>City</option>
-											</select>
-										</div>
-										<div>
-											<!-- Province -->
-											<label for="checkout_province">Province*</label>
-											<select name="checkout_province" id="checkout_province" class="dropdown_item_select checkout_input" require="required">
-												<option></option>
-												<option>Province</option>
-												<option>Province</option>
-												<option>Province</option>
-												<option>Province</option>
-											</select>
-										</div>
-										<div>
-											<!-- Phone no -->
-											<label for="checkout_phone">Phone no*</label>
-											<input type="phone" id="checkout_phone" class="checkout_input" required="required">
-										</div>
-										<div>
-											<!-- Email -->
-											<label for="checkout_email">Email Address*</label>
-											<input type="phone" id="checkout_email" class="checkout_input" required="required">
-										</div>
-										<div class="checkout_extra">
+							<!-- Blog Post -->
+							<div class="blog_post">
+								<div class="blog_post_image"><img src="images/blog_1.jpg" alt="https://unsplash.com/@saskiafairfull"></div>
+								<div class="blog_post_content">
+									<div class="blog_post_date"><a href="#">June 18, 2018</a></div>
+									<div class="blog_post_title"><a href="#">10 Nightwear dresses you need to see</a></div>
+									<div class="blog_post_info d-flex flex-row align-items-start justify-content-start">
+										<div class="blog_post_author">By<a href="#"> Admin</a></div>
+										<div class="blog_post_category">
 											<ul>
-												<li class="billing_info d-flex flex-row align-items-center justify-content-start">
-													<label class="checkbox_container">
-														<input type="checkbox" id="cb_1" name="billing_checkbox" class="billing_checkbox">
-														<span class="checkbox_mark"></span>
-														<span class="checkbox_text">Terms and conditions</span>
-													</label>
-												</li>
-												<li class="billing_info d-flex flex-row align-items-center justify-content-start">
-													<label class="checkbox_container">
-														<input type="checkbox" id="cb_2" name="billing_checkbox" class="billing_checkbox">
-														<span class="checkbox_mark"></span>
-														<span class="checkbox_text">Create an account</span>
-													</label>
-												</li>
-												<li class="billing_info d-flex flex-row align-items-center justify-content-start">
-													<label class="checkbox_container">
-														<input type="checkbox" id="cb_3" name="billing_checkbox" class="billing_checkbox">
-														<span class="checkbox_mark"></span>
-														<span class="checkbox_text">Subscribe to our newsletter</span>
-													</label>
-												</li>
+												<li>in <a href="#">Fashion</a></li>
 											</ul>
 										</div>
-									</form>
-								</div>
-							</div>
-
-							<!-- Cart Total -->
-							<div class="cart_total">
-								<div class="cart_total_inner checkout_box">
-									<div class="checkout_title">Cart total</div>
-									<ul class="cart_extra_total_list">
-										<li class="d-flex flex-row align-items-center justify-content-start">
-											<div class="cart_extra_total_title">Subtotal</div>
-											<div class="cart_extra_total_value ml-auto">$29.90</div>
-										</li>
-										<li class="d-flex flex-row align-items-center justify-content-start">
-											<div class="cart_extra_total_title">Shipping</div>
-											<div class="cart_extra_total_value ml-auto">Free</div>
-										</li>
-										<li class="d-flex flex-row align-items-center justify-content-start">
-											<div class="cart_extra_total_title">Total</div>
-											<div class="cart_extra_total_value ml-auto">$29.90</div>
-										</li>
-									</ul>
-
-									<!-- Payment Options -->
-									<div class="payment">
-										<div class="payment_options">
-											<label class="payment_option clearfix">Paypal
-												<input type="radio" name="radio">
-												<span class="checkmark"></span>
-											</label>
-											<label class="payment_option clearfix">Cach on delivery
-												<input type="radio" name="radio">
-												<span class="checkmark"></span>
-											</label>
-											<label class="payment_option clearfix">Credit card
-												<input type="radio" name="radio">
-												<span class="checkmark"></span>
-											</label>
-											<label class="payment_option clearfix">Direct bank transfer
-												<input type="radio" checked="checked" name="radio">
-												<span class="checkmark"></span>
-											</label>
-										</div>
+										<div class="blog_post_comments"><a href="#">3 Comments</a></div>
 									</div>
-
-									<!-- Order Text -->
-									<div class="order_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra temp or so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus.</div>
-
-									<div class="checkout_button trans_200"><a href="checkout.html">place order</a></div>
+									<div class="blog_post_text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing eli t. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus. Lorem ipsum dolor sit amet, consectetur adipiscing eli t. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus.</p>
+									</div>
 								</div>
 							</div>
-
 						</div>
+
+						<!-- Blog Posts -->
+						<div class="blog_bosts">
+							
+							<!-- Blog Post -->
+							<div class="blog_post">
+								<div class="blog_post_image"><img src="images/blog_2.jpg" alt="https://unsplash.com/@veronezcaroline"></div>
+								<div class="blog_post_content">
+									<div class="blog_post_date"><a href="#">June 18, 2018</a></div>
+									<div class="blog_post_title"><a href="#">Summer Vibes with these 10 essential pieces</a></div>
+									<div class="blog_post_info d-flex flex-row align-items-start justify-content-start">
+										<div class="blog_post_author">By<a href="#"> Admin</a></div>
+										<div class="blog_post_category">
+											<ul>
+												<li>in <a href="#">Fashion</a></li>
+											</ul>
+										</div>
+										<div class="blog_post_comments"><a href="#">3 Comments</a></div>
+									</div>
+									<div class="blog_post_text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing eli t. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus. Lorem ipsum dolor sit amet, consectetur adipiscing eli t. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Blog Posts -->
+						<div class="blog_bosts">
+							
+							<!-- Blog Post -->
+							<div class="blog_post">
+								<div class="blog_post_image"><img src="images/blog_3.jpg" alt=""></div>
+								<div class="blog_post_content">
+									<div class="blog_post_date"><a href="#">June 18, 2018</a></div>
+									<div class="blog_post_title"><a href="#">Trend Allert: Hot Summer Sunglesses</a></div>
+									<div class="blog_post_info d-flex flex-row align-items-start justify-content-start">
+										<div class="blog_post_author">By<a href="#"> Admin</a></div>
+										<div class="blog_post_category">
+											<ul>
+												<li>in <a href="#">Fashion</a></li>
+											</ul>
+										</div>
+										<div class="blog_post_comments"><a href="#">3 Comments</a></div>
+									</div>
+									<div class="blog_post_text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing eli t. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus. Lorem ipsum dolor sit amet, consectetur adipiscing eli t. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="row load_more_row">
+					<div class="col">
+						<div class="load_more_button trans_200 ml-auto mr-auto"><a href="#">load more</a></div>
 					</div>
 				</div>
 			</div>
@@ -543,21 +467,21 @@
 
 									<!-- Blog Item -->
 									<div class="footer_blog_item d-flex flex-row align-items-start justify-content-start">
-										<div class="footer_blog_image"><a href="blog.html"><img src="images/footer_blog_1.jpg" alt=""></a></div>
+										<div class="footer_blog_image"><a href="blog.jsp"><img src="images/footer_blog_1.jpg" alt=""></a></div>
 										<div class="footer_blog_content">
-											<div class="footer_blog_title"><a href="blog.html">what shoes to wear</a></div>
+											<div class="footer_blog_title"><a href="blog.jsp">what shoes to wear</a></div>
 											<div class="footer_blog_date">june 06, 2018</div>
-											<div class="footer_blog_link"><a href="blog.html">Read More</a></div>
+											<div class="footer_blog_link"><a href="blog.jsp">Read More</a></div>
 										</div>
 									</div>
 
 									<!-- Blog Item -->
 									<div class="footer_blog_item d-flex flex-row align-items-start justify-content-start">
-										<div class="footer_blog_image"><a href="blog.html"><img src="images/footer_blog_2.jpg" alt=""></a></div>
+										<div class="footer_blog_image"><a href="blog.jsp"><img src="images/footer_blog_2.jpg" alt=""></a></div>
 										<div class="footer_blog_content">
-											<div class="footer_blog_title"><a href="blog.html">trends this year</a></div>
+											<div class="footer_blog_title"><a href="blog.jsp">trends this year</a></div>
 											<div class="footer_blog_date">june 06, 2018</div>
-											<div class="footer_blog_link"><a href="blog.html">Read More</a></div>
+											<div class="footer_blog_link"><a href="blog.jsp">Read More</a></div>
 										</div>
 									</div>
 
@@ -678,6 +602,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/checkout.js"></script>
+<script src="js/blog.js"></script>
 </body>
 </html>
