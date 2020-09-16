@@ -3,4 +3,5 @@
 <properties>
     <entry key="path.json.files">./vol/JSON/</entry>
     <entry key="path.java.files">./vol/Java/</entry>
+    <entry key="path.dataobjects.java">./src/main/java/com/creation/dataobjects</entry>
 </properties>
