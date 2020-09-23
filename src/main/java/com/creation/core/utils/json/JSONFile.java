@@ -1,4 +1,4 @@
-package com.creation.core.utils.jsonUtils;
+package com.creation.core.utils.json;
 
 import org.json.simple.JSONObject;
 

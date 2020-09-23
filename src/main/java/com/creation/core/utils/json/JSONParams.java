@@ -1,6 +1,6 @@
-package com.creation.core.utils.jsonUtils;
+package com.creation.core.utils.json;
 
-import com.creation.core.utils.PropertyXMLProcessor;
+import com.creation.core.utils.AppProperty;
 
 /**
  * Core class
@@ -10,6 +10,6 @@ public class JSONParams {
 
     public static final String POSTFIX = ".json";
 
-    public static final String PATH = PropertyXMLProcessor.getProperty("path.json.files");
+    public static final String PATH = AppProperty.getProperty("path.json.files").toString();
 
 }

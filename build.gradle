@@ -18,6 +18,7 @@ dependencies {
     compile group: 'org.springframework', name: 'spring-webmvc', version: '5.2.8.RELEASE'
     compile 'com.github.jsimone:webapp-runner:8.5.11.3'
     compile 'com.weblookandfeel:weblaf-ui:1.2.13'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.3'
 }
 task stage() {
     dependsOn clean, war

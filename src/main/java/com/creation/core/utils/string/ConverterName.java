@@ -1,4 +1,4 @@
-package com.creation.core.utils.stringUtils;
+package com.creation.core.utils.string;
 
 public class ConverterName {
 

@@ -1,6 +1,5 @@
-package com.creation.core.utils.jsonUtils;
+package com.creation.core.utils.json;
 
-import com.creation.core.utils.jsonUtils.JSONReader;
 import org.json.simple.JSONArray;
 
 import java.util.ArrayList;
