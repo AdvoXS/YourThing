@@ -1,5 +1,10 @@
 package com.creation.view.frames;
 
+import com.creation.entity.Product;
+import com.creation.view.elements.HTextField;
+import com.creation.view.elements.row.RowProductPanel;
+import com.creation.view.elements.row.creators.RowProductCreator;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -10,6 +15,13 @@ public class MainFrame extends JFrame {
     private JPanel panel1;
     private JSplitPane splitPane1;
     private JPanel mainPanel;
+    private JTextField searchField;
+    private JButton searchButton;
+    private JButton filterBut;
+    private JPanel searchPanel;
+    private JLabel searchByLabel;
+    private JComboBox searchByBox;
+    private JPanel filterPanel1;
 
     public MainFrame(){
         setTitle("Market Place");
@@ -25,6 +37,19 @@ public class MainFrame extends JFrame {
         button1 = new JButton("Hello");
         button2 = new JButton("Hi");
         button3 = new JButton("Buy");
-        // TODO: place custom component creation code here
+        searchButton = new JButton();
+        searchField = new HTextField("Поиск...");
+        filterBut = new JButton();
+        searchPanel = new JPanel();
+        filterPanel1 = new JPanel();
+        searchByLabel = new JLabel("Поиск по");
+        searchByBox = new JComboBox();
+        searchByBox.addItem("По товарам");
+        searchByBox.addItem("По магазинам");
+        /*
+        Product product = new Product();
+        product.setTitle("Car");
+        product.setDescription("description of this product");
+        searchPanel.add(new RowProductCreator().createItem(product));*/
     }
 }
