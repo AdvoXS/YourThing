@@ -1,13 +1,10 @@
 package com.creation.core.utils.xml;
 
 public class XMLProcessorFactory {
-    public static <T> XMLProcessor getProcessor(Class<T> tClass){
+    public static <T> XMLProcessor getProcessor(Class<T> tClass) {
         String className = tClass.getName();
-        switch (className){
-            case "XMLPropertyProcessor":
-                return new XMLPropertyProcessor();
-            default:
-                return null;
-        }
+        if (className.equals(XMLPropertyProcessor.class.getName()))
+            return new XMLPropertyProcessor();
+        else return null;
     }
 }

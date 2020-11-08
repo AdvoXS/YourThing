@@ -1,4 +1,4 @@
-package com.creation.view.elements.row;
+package com.creation.entity;
 
 /**
  * Constants for name of created components

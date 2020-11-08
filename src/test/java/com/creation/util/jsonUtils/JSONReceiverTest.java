@@ -1,14 +1,11 @@
 package com.creation.util.jsonUtils;
 
-import com.creation.core.utils.json.JSONReceiver;
+import com.creation.core.utils.json.file.JSONReceiver;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Rule;
-import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class JSONReceiverTest {
     JSONReceiver jReceiver;

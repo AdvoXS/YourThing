@@ -1,4 +1,4 @@
-package com.creation.core.utils.json;
+package com.creation.core.utils.json.file;
 
 import org.json.simple.JSONArray;
 

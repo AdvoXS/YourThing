@@ -4,6 +4,7 @@ package com.creation.core.utils;
 import com.creation.core.utils.xml.XMLProcessor;
 import com.creation.core.utils.xml.XMLProcessorFactory;
 import com.creation.core.utils.xml.XMLPropertyProcessor;
+import org.springframework.stereotype.Component;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -17,16 +18,17 @@ import java.io.IOException;
  * @Date 07.09.2020
  */
 
+@Component
 public class AppProperty {
     private static final String propertyURL = "./src/main/resources/project_properties.xml";
     private static final SAXParserFactory factory = SAXParserFactory.newInstance();
-    private static XMLProcessor processor;
+    private static final XMLProcessor processor = XMLProcessorFactory.getProcessor(XMLPropertyProcessor.class);
     private static SAXParser parser;
 
     /**
      * Получение настройки проекта по пути /src/main/resources/project_properties.xml
      */
-    public static Object getProperty(String property) {
+    public static String getProperty(String property) {
         try {
             parse(property);
             if (processor.getValue() != null)
@@ -34,7 +36,7 @@ public class AppProperty {
         } catch (Exception ignored) {
 
         }
-        return new Object();
+        return new String();
     }
 
     private static void createParser() {
@@ -45,15 +47,9 @@ public class AppProperty {
         }
     }
 
-    private static void createProcessor(String property) {
-        processor = XMLProcessorFactory.getProcessor(XMLPropertyProcessor.class);
-        if (processor != null)
-            processor.setKey(property);
-    }
-
     private static void parse(String property) {
         createParser();
-        createProcessor(property);
+        processor.setKey(property);
         try {
             parser.parse(new File(propertyURL), processor);
         } catch (IOException | SAXException e) {

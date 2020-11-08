@@ -4,4 +4,7 @@
     <entry key="path.json.files">./vol/JSON/</entry>
     <entry key="path.java.files">./vol/Java/</entry>
     <entry key="path.dataobjects.java">./src/main/java/com/creation/dataobjects</entry>
+    <entry key="restful.get.url">http://api.mskpropusk.com</entry>
+    <entry key="restful.post.url">http://localhost:8080/RESTfulExample/json/product/post</entry>
+    <entry key="developer.stacktrace">true</entry>
 </properties>

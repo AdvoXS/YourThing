@@ -8,7 +8,7 @@ public abstract class XMLProcessor extends DefaultHandler {
 
     private String key;
 
-    public Object getValue() {
+    public String getValue() {
         return value;
     }
 

@@ -17,20 +17,24 @@ public class MainFrame extends JFrame {
     private JButton filterBut;
     private JPanel searchPanel;
     private JLabel searchByLabel;
-    private JComboBox searchByBox;
+    private JComboBox<String> searchByBox;
     private JPanel filterPanel1;
     private JButton ApplyFilterProdButton;
-    private JTextField СostFromTextF;
+    private JTextField CostFromTextF;
     private JPanel filterPanelProduct;
     private JTextField CostToTextF;
     private JPanel FullPanel;
-    private JComboBox CategoryProductBox;
+    private JComboBox<String> CategoryProductBox;
 
     public MainFrame() {
         setTitle("Market Place");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(mainPanel);
-        setPreferredSize(new Dimension(800, 600));
+        int sizeWidth = 800;
+        int sizeHeight = 600;
+        setPreferredSize(new Dimension(sizeWidth, sizeHeight));
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        setLocation((screenSize.width - sizeWidth) / 2, (screenSize.height - sizeHeight) / 2);
         pack();
     }
 
@@ -44,20 +48,24 @@ public class MainFrame extends JFrame {
         searchField = new HTextField("Поиск...");
         filterBut = new JButton();
         searchPanel = new JPanel();
+
         filterPanel1 = new JPanel();
         searchByLabel = new JLabel("Поиск по");
         searchByBox = new JComboBox<String>();
         searchByBox.addItem("По товарам");
         searchByBox.addItem("По магазинам");
+
         filterPanelProduct = new JPanel();
-        СostFromTextF = new HTextField("Стоимость от");
+        CostFromTextF = new HTextField("Стоимость от");
         CostToTextF = new HTextField("Стоимость до");
+
         CategoryProductBox = new JComboBox<String>();
         CategoryProductBox.addItem("Верхняя одежда");
         CategoryProductBox.addItem("Штаны");
         CategoryProductBox.addItem("Шорты");
         CategoryProductBox.addItem("Футболки");
         CategoryProductBox.addItem("Украшения");
+
         filterBut.setBackground(Color.WHITE);
         filterBut.addActionListener((e) -> {
             if (isFilterClicked) {

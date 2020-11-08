@@ -1,7 +1,7 @@
 package com.creation.view.elements.row;
 
 import com.creation.entity.Entity;
-
+import com.creation.entity.EntityName;
 
 import javax.swing.*;
 import java.awt.*;

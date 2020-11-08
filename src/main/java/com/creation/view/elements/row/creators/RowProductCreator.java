@@ -1,15 +1,14 @@
 package com.creation.view.elements.row.creators;
 
 import com.creation.entity.Entity;
+import com.creation.entity.EntityName;
 import com.creation.entity.Product;
-import com.creation.view.elements.row.EntityName;
 import com.creation.view.elements.row.RowItemPanel;
 import com.creation.view.elements.row.RowProductPanel;
 
-import java.util.logging.Logger;
-
 import javax.swing.*;
 import java.awt.*;
+import java.util.logging.Logger;
 
 public class RowProductCreator implements RowItemCreator {
 
@@ -30,7 +29,6 @@ public class RowProductCreator implements RowItemCreator {
             logger.info("Not valid instance of injected object  " + entity.getClass().getName() + ". Valid is " + Product.class.getName());
         }
         return panel;
-
     }
 
     /**

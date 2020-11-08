@@ -1,4 +1,4 @@
 package com.creation.view.frames;
 
-public class ProfileFrame {
+public class ProfileFrame extends AbstractFrame {
 }
