@@ -1,7 +1,5 @@
-package com.creation.controllers.core.post;
+package com.creation.controllers.core.service;
 
-import com.creation.controllers.core.RestService;
-import com.creation.controllers.core.get.GetService;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 

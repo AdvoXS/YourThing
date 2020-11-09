@@ -1,6 +1,6 @@
 package com.creation.entity;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 public class User implements Entity {
 
@@ -10,12 +10,12 @@ public class User implements Entity {
     String firstName;
     String lastName;
     String status;
-    LocalDateTime confirmed_at;
-    LocalDateTime rewiewed_at;
-    LocalDateTime created_at;
-    LocalDateTime updated_at;
+    Date confirmed_at;
+    Date rewiewed_at;
+    Date created_at;
+    Date updated_at;
 
-    public User(int id, String email, int phone, String firstName, String lastName, String status, LocalDateTime confirmed_at, LocalDateTime rewiewed_at, LocalDateTime created_at, LocalDateTime updated_at) {
+    public User(int id, String email, int phone, String firstName, String lastName, String status, Date confirmed_at, Date rewiewed_at, Date created_at, Date updated_at) {
         this.id = id;
         this.email = email;
         this.phone = phone;
@@ -76,35 +76,35 @@ public class User implements Entity {
         this.status = status;
     }
 
-    public LocalDateTime getConfirmed_at() {
+    public Date getConfirmed_at() {
         return confirmed_at;
     }
 
-    public void setConfirmed_at(LocalDateTime confirmed_at) {
+    public void setConfirmed_at(Date confirmed_at) {
         this.confirmed_at = confirmed_at;
     }
 
-    public LocalDateTime getRewiewed_at() {
+    public Date getRewiewed_at() {
         return rewiewed_at;
     }
 
-    public void setRewiewed_at(LocalDateTime rewiewed_at) {
+    public void setRewiewed_at(Date rewiewed_at) {
         this.rewiewed_at = rewiewed_at;
     }
 
-    public LocalDateTime getCreated_at() {
+    public Date getCreated_at() {
         return created_at;
     }
 
-    public void setCreated_at(LocalDateTime created_at) {
+    public void setCreated_at(Date created_at) {
         this.created_at = created_at;
     }
 
-    public LocalDateTime getUpdated_at() {
+    public Date getUpdated_at() {
         return updated_at;
     }
 
-    public void setUpdated_at(LocalDateTime updated_at) {
+    public void setUpdated_at(Date updated_at) {
         this.updated_at = updated_at;
     }
 }

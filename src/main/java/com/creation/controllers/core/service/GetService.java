@@ -1,7 +1,5 @@
-package com.creation.controllers.core.get;
+package com.creation.controllers.core.service;
 
-import com.creation.controllers.core.RestService;
-import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 
 import java.io.IOException;
@@ -14,8 +12,7 @@ public abstract class GetService extends RestService {
 
     public abstract void setHttpGet();
 
-
-    public HttpResponse getResponse() {
+    public void getResponse() {
         try {
             if (httpGet != null) {
                 response = httpClient.execute(httpGet);
@@ -27,7 +24,6 @@ public abstract class GetService extends RestService {
         } catch (IOException | RuntimeException exc) {
             logger.info(exc.getMessage());
         }
-        return response;
     }
 
 }
