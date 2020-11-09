@@ -49,6 +49,7 @@ public class MainFrame extends JFrame {
         filterBut = new JButton();
         searchPanel = new JPanel();
 
+
         filterPanel1 = new JPanel();
         searchByLabel = new JLabel("Поиск по");
         searchByBox = new JComboBox<String>();

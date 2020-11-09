@@ -6,6 +6,7 @@ import com.creation.controllers.core.executor.GetObjectsExecutor;
 import com.creation.controllers.core.executor.PostExecutor;
 import com.creation.controllers.get.MainController;
 import com.creation.controllers.post.OperatorLoginC;
+import com.creation.controllers.post.UserSignUpC;
 import com.creation.core.config.SpringApplicationConfig;
 import com.creation.view.frames.MainFrame;
 import org.springframework.context.ApplicationContext;
@@ -27,7 +28,7 @@ public class Application {
         objectsExecutor.createExecutor(MainController.class);
         objectsExecutor.getObjectList();
         postExecutor = context.getBean(PostExecutor.class);
-        postExecutor.createExecutor(OperatorLoginC.class);
+        postExecutor.createExecutor(UserSignUpC.class);
         postExecutor.run();
         postExecutor.getResponseInfo();
         MainFrame mainFrame = new MainFrame();

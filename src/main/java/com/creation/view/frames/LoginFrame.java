@@ -5,8 +5,8 @@ import java.awt.*;
 
 public class LoginFrame extends JFrame{
     private JTextField textField1;
-    private JButton button1;
-    private JButton button2;
+    private JButton отменаButton;
+    private JButton войтиButton;
     private JPanel mainPanel;
     private JPasswordField passwordField1;
 
@@ -14,7 +14,7 @@ public class LoginFrame extends JFrame{
         setTitle("Your Things");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(mainPanel);
-        setPreferredSize(new Dimension(600, 400));
+        setPreferredSize(new Dimension(400, 150));
         pack();
     }
 }
