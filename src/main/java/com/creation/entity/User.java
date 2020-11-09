@@ -15,6 +15,9 @@ public class User implements Entity {
     Date created_at;
     Date updated_at;
 
+    public User() {
+    }
+
     public User(int id, String email, int phone, String firstName, String lastName, String status, Date confirmed_at, Date rewiewed_at, Date created_at, Date updated_at) {
         this.id = id;
         this.email = email;

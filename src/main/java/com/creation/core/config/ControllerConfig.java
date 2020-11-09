@@ -1,12 +1,10 @@
 package com.creation.core.config;
 
-import com.creation.controllers.get.MainController;
-import com.creation.controllers.post.OperatorLoginC;
-import com.creation.controllers.post.UserSignUpC;
+import com.creation.controller.get.MainController;
+import com.creation.controller.post.OperatorLoginC;
+import com.creation.controller.post.UserSignUpC;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import java.security.Signature;
 
 /**
  * Configuration init controllers beans

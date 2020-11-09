@@ -1,6 +1,6 @@
-package com.creation.controllers.core.executor;
+package com.creation.core.controller.executor;
 
-import com.creation.controllers.get.MainController;
+import com.creation.controller.get.MainController;
 import com.creation.core.config.SpringApplicationConfig;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;

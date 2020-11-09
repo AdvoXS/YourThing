@@ -1,9 +1,10 @@
-package com.creation.controllers.core.service;
+package com.creation.core.controller.service;
 
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.logging.Logger;
 
 public abstract class PostService extends RestService {
@@ -15,7 +16,10 @@ public abstract class PostService extends RestService {
 
     public abstract void setHttpPost();
 
-    public abstract void setRequest();
+    /**
+     * @param reqObjects - entities or dataobjects which included in post request
+     */
+    public abstract void setRequest(List<Object> reqObjects);
 
     public void setContentType() {
         if (output != null)

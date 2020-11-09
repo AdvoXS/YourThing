@@ -2,18 +2,20 @@ package com.creation;
 
 
 import com.alee.laf.WebLookAndFeel;
-import com.creation.controllers.core.executor.GetObjectsExecutor;
-import com.creation.controllers.core.executor.PostExecutor;
-import com.creation.controllers.get.MainController;
-import com.creation.controllers.post.OperatorLoginC;
-import com.creation.controllers.post.UserSignUpC;
+import com.creation.controller.get.MainController;
+import com.creation.controller.post.OperatorLoginC;
 import com.creation.core.config.SpringApplicationConfig;
+import com.creation.core.controller.executor.GetObjectsExecutor;
+import com.creation.core.controller.executor.PostExecutor;
+import com.creation.entity.User;
 import com.creation.view.frames.MainFrame;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 
 @Component
 public class Application {
@@ -28,7 +30,10 @@ public class Application {
         objectsExecutor.createExecutor(MainController.class);
         objectsExecutor.getObjectList();
         postExecutor = context.getBean(PostExecutor.class);
-        postExecutor.createExecutor(UserSignUpC.class);
+        ArrayList<User> users = new ArrayList<>();
+        users.add(new User());
+        postExecutor.setPostData(Collections.singletonList(users));
+        postExecutor.createExecutor(OperatorLoginC.class);
         postExecutor.run();
         postExecutor.getResponseInfo();
         MainFrame mainFrame = new MainFrame();

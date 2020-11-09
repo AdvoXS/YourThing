@@ -1,7 +1,7 @@
-package com.creation.controllers.core.get;
+package com.creation.core.controller.get;
 
-import com.creation.controllers.core.Controller;
-import com.creation.controllers.core.service.GetService;
+import com.creation.core.controller.Controller;
+import com.creation.core.controller.service.GetService;
 
 import java.util.ArrayList;
 import java.util.List;

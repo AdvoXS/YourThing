@@ -1,4 +1,4 @@
-package com.creation.controllers.core.service;
+package com.creation.core.controller.service;
 
 import com.creation.core.utils.AppProperty;
 import com.creation.core.utils.xml.PropertyApp;
@@ -13,6 +13,10 @@ public abstract class RestService extends Rest {
     Logger logger = Logger.getLogger(Rest.class.getName());
 
     private String jsonInput;
+
+    public void configure() {
+
+    }
 
     public void read() {
         StringBuilder completeString = new StringBuilder();
@@ -34,9 +38,12 @@ public abstract class RestService extends Rest {
         jsonInput = completeString.toString();
     }
 
-    public abstract void configure();
 
     public String getResponseInfo() {
         return jsonInput;
+    }
+
+    public void postProcess() {
+
     }
 }

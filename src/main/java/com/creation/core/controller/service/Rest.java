@@ -1,4 +1,4 @@
-package com.creation.controllers.core.service;
+package com.creation.core.controller.service;
 
 import com.google.gson.Gson;
 import org.apache.http.HttpResponse;
@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Rest {
+public abstract class Rest {
 
     @Autowired
     protected HttpClient httpClient;

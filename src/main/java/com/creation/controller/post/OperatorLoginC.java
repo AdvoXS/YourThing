@@ -1,21 +1,27 @@
-package com.creation.controllers.post;
+package com.creation.controller.post;
 
-import com.creation.controllers.core.post.SimplePostController;
+import com.creation.core.controller.post.AuthorizationPostController;
+import com.creation.entity.User;
+import com.creation.restobject.Auth;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 @Component
-public class OperatorLoginC extends SimplePostController {
+public class OperatorLoginC extends AuthorizationPostController {
+
     @Override
     public void setHttpPost() {
         httpPost = new HttpPost("http://api.mskpropusk.com/operators/login");
     }
 
     @Override
-    public void setRequest() {
+    public void setRequest(List<Object> reqObjects) {
         try {
             output = new StringEntity("{\n" +
                     "    \"credentials\": {\n" +
@@ -32,5 +38,12 @@ public class OperatorLoginC extends SimplePostController {
     @Override
     public void configure() {
 
+    }
+
+    @Bean(name = "UserEntity")
+    @Lazy
+    public User getUser() {
+        Auth o = parser.fromJson(getResponseInfo(), Auth.class);
+        return o.getUser();
     }
 }

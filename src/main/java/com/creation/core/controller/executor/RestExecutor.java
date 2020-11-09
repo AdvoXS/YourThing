@@ -1,6 +1,6 @@
-package com.creation.controllers.core.executor;
+package com.creation.core.controller.executor;
 
-import com.creation.controllers.core.Controller;
+import com.creation.core.controller.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 

@@ -1,6 +1,6 @@
-package com.creation.controllers.get;
+package com.creation.controller.get;
 
-import com.creation.controllers.core.get.GetObjectController;
+import com.creation.core.controller.get.GetObjectController;
 import com.creation.core.utils.AppProperty;
 import org.apache.http.client.methods.HttpGet;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package com.creation.controllers.core.service;
+package com.creation.core.controller.service;
 
 import org.apache.http.client.methods.HttpGet;
 
@@ -25,5 +25,6 @@ public abstract class GetService extends RestService {
             logger.info(exc.getMessage());
         }
     }
+
 
 }

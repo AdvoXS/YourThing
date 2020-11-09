@@ -1,6 +1,6 @@
-package com.creation.controllers.core.executor;
+package com.creation.core.controller.executor;
 
-import com.creation.controllers.core.get.GetObjectController;
+import com.creation.core.controller.get.GetObjectController;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

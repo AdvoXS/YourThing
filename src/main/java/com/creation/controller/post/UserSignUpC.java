@@ -1,10 +1,11 @@
-package com.creation.controllers.post;
+package com.creation.controller.post;
 
-import com.creation.controllers.core.post.SimplePostController;
+import com.creation.core.controller.post.SimplePostController;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 public class UserSignUpC extends SimplePostController {
     @Override
@@ -13,15 +14,13 @@ public class UserSignUpC extends SimplePostController {
     }
 
     @Override
-    public void setRequest() {
+    public void setRequest(List<Object> reqObjects) {
         try {
             output = new StringEntity("{\n" +
                     "        \"email\": \"vasya@gmail.ru\"\n" +
                     "}");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
-
-
         }
     }
 
