@@ -21,6 +21,11 @@ public class MainController extends GetObjectController {
         httpGet = new HttpGet(AppProperty.getProperty("restful.get.url"));
     }
 
+    @Override
+    public void configure() {
+
+    }
+
     static public class MainPage {
         boolean alive;
         LocalDateTime timeStamp;

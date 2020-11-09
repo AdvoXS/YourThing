@@ -34,6 +34,11 @@ public class GetObjectsExecutor extends RestExecutor {
         getController.createObjects();
     }
 
+    @Override
+    void getResponseInfo() {
+
+    }
+
     public List<Object> getObjectList() {
         return getController.getObjectList();
     }

@@ -1,18 +1,42 @@
 package com.creation.controllers.core;
 
-import com.google.gson.Gson;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import com.creation.core.utils.AppProperty;
+import com.creation.core.utils.xml.PropertyApp;
 
-@Component
-public class RestService {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.logging.Logger;
 
-    @Autowired
-    protected HttpClient httpClient;
+public abstract class RestService extends Rest {
 
-    protected HttpResponse response;
+    Logger logger = Logger.getLogger(Rest.class.getName());
 
-    protected Gson parser = new Gson();
+    private String jsonInput;
+
+    public void read() {
+        StringBuilder completeString = new StringBuilder();
+        try {
+            BufferedReader br = new BufferedReader(
+                    new InputStreamReader((response.getEntity().getContent())));
+
+            String output;
+            while ((output = br.readLine()) != null) {
+                completeString.append(output);
+            }
+            if (Boolean.parseBoolean(AppProperty.getProperty(PropertyApp.DEV_TRACE))) {
+                logger.info("Output from Server ....");
+                logger.info(completeString.toString());
+            }
+        } catch (IOException exc) {
+            logger.info(exc.getMessage());
+        }
+        jsonInput = completeString.toString();
+    }
+
+    public abstract void configure();
+
+    public String getResponseInfo() {
+        return jsonInput;
+    }
 }
