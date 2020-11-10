@@ -1,26 +1,24 @@
 package com.creation.core.controller.post;
 
 import com.creation.core.controller.service.PostService;
-import com.creation.restobject.Auth;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.logging.Logger;
 
 @Component
 public abstract class AuthorizationPostController extends PostService {
-    @Autowired
-    Auth auth;
+    //@Autowired
+    //Auth auth;
 
     Logger logger = Logger.getLogger(AuthorizationPostController.class.getSimpleName());
 
-    protected void getToken() {
+    /*protected void getToken() {
         if (getResponseInfo() != null) {
             Auth tmpA;
             tmpA = parser.fromJson(getResponseInfo(), Auth.class);
             auth.setToken(tmpA.getToken());
         }
-    }
+    }*/
 
     @Override
     public void send() {
@@ -31,6 +29,6 @@ public abstract class AuthorizationPostController extends PostService {
 
     @Override
     public void postProcess() {
-        getToken();
+        //getToken();
     }
 }

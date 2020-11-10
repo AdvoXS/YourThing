@@ -1,12 +1,8 @@
 package com.creation.controller.post;
 
 import com.creation.core.controller.post.AuthorizationPostController;
-import com.creation.entity.User;
-import com.creation.restobject.Auth;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 import java.io.UnsupportedEncodingException;
@@ -40,10 +36,10 @@ public class OperatorLoginC extends AuthorizationPostController {
 
     }
 
-    @Bean(name = "UserEntity")
+   /* @Bean(name = "UserEntity")
     @Lazy
     public User getUser() {
         Auth o = parser.fromJson(getResponseInfo(), Auth.class);
         return o.getUser();
-    }
+    }*/
 }
