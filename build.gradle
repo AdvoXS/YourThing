@@ -21,6 +21,7 @@ dependencies {
     compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.13'
     implementation 'com.google.code.gson:gson:2.8.6'
     testCompile group: 'org.springframework', name: 'spring-test', version: '5.2.8.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: '2.3.5.RELEASE'
 }
 task stage() {
     dependsOn clean, war
