@@ -6,7 +6,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
-
+@Deprecated
 @Component
 public class MainController extends GetObjectController {
 

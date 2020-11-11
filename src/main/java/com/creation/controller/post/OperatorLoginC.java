@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.UnsupportedEncodingException;
 import java.util.List;
-
+@Deprecated
 @Component
 public class OperatorLoginC extends AuthorizationPostController {
 

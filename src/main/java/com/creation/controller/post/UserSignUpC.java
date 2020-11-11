@@ -6,7 +6,7 @@ import org.apache.http.entity.StringEntity;
 
 import java.io.UnsupportedEncodingException;
 import java.util.List;
-
+@Deprecated
 public class UserSignUpC extends SimplePostController {
     @Override
     public void setHttpPost() {
