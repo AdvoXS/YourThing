@@ -1,10 +1,13 @@
 package com.creation.view.frames;
 
+import com.creation.view.core.SwingProps;
 import com.creation.view.elements.HTextField;
+import org.springframework.stereotype.Component;
 
 import javax.swing.*;
 import java.awt.*;
 
+@Component
 public class MainFrame extends JFrame {
     private JButton button1;
     boolean isFilterClicked = true;
@@ -26,15 +29,15 @@ public class MainFrame extends JFrame {
     private JPanel FullPanel;
     private JComboBox<String> CategoryProductBox;
 
+    int sizeWidth = 800;
+    int sizeHeight = 600;
+
     public MainFrame() {
         setTitle("Market Place");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(mainPanel);
-        int sizeWidth = 800;
-        int sizeHeight = 600;
         setPreferredSize(new Dimension(sizeWidth, sizeHeight));
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        setLocation((screenSize.width - sizeWidth) / 2, (screenSize.height - sizeHeight) / 2);
+        SwingProps.setStartWindowCenter(this, sizeWidth, sizeHeight);
         pack();
     }
 
