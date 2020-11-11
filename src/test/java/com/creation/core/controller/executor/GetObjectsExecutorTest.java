@@ -1,7 +1,7 @@
 package com.creation.core.controller.executor;
 
 import com.creation.controller.get.MainController;
-import com.creation.core.config.SpringApplicationConfig;
+import com.creation.core.application.SpringApplicationConfig;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
