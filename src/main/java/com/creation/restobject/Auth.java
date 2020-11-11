@@ -5,7 +5,11 @@ import com.creation.entity.User;
 public class Auth {
 
     User owner;
+
     private String token;
+
+    public Auth() {
+    }
 
     public User getUser() {
         return owner;

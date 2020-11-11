@@ -1,4 +1,4 @@
-package com.creation.core.config;
+package com.creation.config;
 
 import com.creation.controller.get.MainController;
 import com.creation.controller.post.OperatorLoginC;

@@ -1,6 +1,6 @@
 package com.creation.controller.spring.post;
 
-import com.creation.core.config.SpringApplicationConfig;
+import com.creation.core.application.SpringApplicationConfig;
 import com.creation.restobject.Auth;
 import org.junit.Assert;
 import org.junit.Before;
@@ -18,7 +18,7 @@ public class OperatorLoginSCTest {
 
     @Test
     public void getAuthObject() {
-        Auth auth = context.getBean(Auth.class);
+        Auth auth = context.getBean(Auth.class, "123213", "2332");
         Assert.assertNotNull(auth);
     }
 }
