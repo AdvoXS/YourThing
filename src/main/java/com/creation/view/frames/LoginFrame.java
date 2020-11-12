@@ -44,6 +44,7 @@ public class LoginFrame extends JFrame {
                 SwingAction.displayError("Ошибка авторизации. Проверьте правильность ввода пароля и почты");
             }
         });
+        cancelButton.addActionListener(e -> System.exit(0));
     }
 
     private void startApp() {
