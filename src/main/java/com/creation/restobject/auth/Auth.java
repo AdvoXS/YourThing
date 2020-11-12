@@ -1,4 +1,4 @@
-package com.creation.restobject;
+package com.creation.restobject.auth;
 
 import com.creation.entity.User;
 

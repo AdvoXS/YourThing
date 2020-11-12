@@ -1,6 +1,6 @@
-package com.creation.controller.post;
+package com.creation.controller.old.post;
 
-import com.creation.core.controller.post.AuthorizationPostController;
+import com.creation.core.old.controller.post.AuthorizationPostController;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.springframework.stereotype.Component;

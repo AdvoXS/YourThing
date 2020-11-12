@@ -1,6 +1,6 @@
-package com.creation.core.controller.executor;
+package com.creation.core.old.controller.executor;
 
-import com.creation.core.controller.service.PostService;
+import com.creation.core.old.controller.service.PostService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

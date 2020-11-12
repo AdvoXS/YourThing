@@ -1,8 +1,8 @@
 package com.creation.config;
 
-import com.creation.controller.get.MainController;
-import com.creation.controller.post.OperatorLoginC;
-import com.creation.controller.post.UserSignUpC;
+import com.creation.controller.old.get.MainController;
+import com.creation.controller.old.post.OperatorLoginC;
+import com.creation.controller.old.post.UserSignUpC;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

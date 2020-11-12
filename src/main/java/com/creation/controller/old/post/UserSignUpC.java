@@ -1,6 +1,6 @@
-package com.creation.controller.post;
+package com.creation.controller.old.post;
 
-import com.creation.core.controller.post.SimplePostController;
+import com.creation.core.old.controller.post.SimplePostController;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 

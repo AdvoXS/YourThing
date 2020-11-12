@@ -1,6 +1,6 @@
-package com.creation.core.controller.post;
+package com.creation.core.old.controller.post;
 
-import com.creation.core.controller.service.PostService;
+import com.creation.core.old.controller.service.PostService;
 import org.springframework.stereotype.Component;
 
 import java.util.logging.Logger;

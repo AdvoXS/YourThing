@@ -1,6 +1,6 @@
 package com.creation.view.frames;
 
-import com.creation.restobject.AuthService;
+import com.creation.restobject.auth.AuthService;
 import com.creation.view.core.SwingAction;
 import com.creation.view.core.SwingProps;
 import org.springframework.beans.factory.annotation.Autowired;

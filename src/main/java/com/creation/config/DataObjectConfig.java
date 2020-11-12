@@ -1,7 +1,7 @@
 package com.creation.config;
 
-import com.creation.restobject.Auth;
-import com.creation.restobject.AuthService;
+import com.creation.restobject.auth.Auth;
+import com.creation.restobject.auth.AuthService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
