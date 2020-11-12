@@ -32,7 +32,7 @@
           <text value="Войти"/>
         </properties>
       </component>
-      <component id="10726" class="javax.swing.JPasswordField" binding="passwordField">
+      <component id="10726" class="javax.swing.JPasswordField" binding="passwordField" custom-create="true">
         <constraints>
           <grid row="3" column="1" row-span="2" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -51,7 +51,7 @@
           <text value="Пароль:"/>
         </properties>
       </component>
-      <component id="5d11f" class="javax.swing.JTextField" binding="loginField">
+      <component id="5d11f" class="javax.swing.JTextField" binding="loginField" custom-create="true">
         <constraints>
           <grid row="1" column="1" row-span="2" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>

@@ -35,6 +35,8 @@ public class LoginFrame extends JFrame {
     private void createUIComponents() {
         enterButton = new JButton();
         cancelButton = new JButton();
+        loginField = new JTextField();
+        passwordField = new JPasswordField();
         enterButton.addActionListener((e) -> {
             String mail = loginField.getText();
             String pass = String.valueOf(passwordField.getPassword());
@@ -45,6 +47,14 @@ public class LoginFrame extends JFrame {
             }
         });
         cancelButton.addActionListener(e -> System.exit(0));
+        setTestAuthInfo();
+    }
+
+    /**
+     * only for test
+     */
+    private void setTestAuthInfo() {
+        loginField.setText("operator@test.ru");
     }
 
     private void startApp() {

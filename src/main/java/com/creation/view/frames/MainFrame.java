@@ -35,6 +35,7 @@ public class MainFrame extends JFrame {
     int sizeWidth = 800;
     int sizeHeight = 600;
     private JButton profileButton;
+    private JButton marketButton;
 
     public MainFrame() {
         setTitle("Market Place");
@@ -56,7 +57,7 @@ public class MainFrame extends JFrame {
         filterBut = new JButton();
         searchPanel = new JPanel();
 
-
+        marketButton = new JButton();
         filterPanel1 = new JPanel();
         searchByLabel = new JLabel("Поиск по");
         searchByBox = new JComboBox<String>();
