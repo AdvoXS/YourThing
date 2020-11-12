@@ -1,8 +1,6 @@
-package com.creation.restobject;
+package com.creation.restobject.auth;
 
 import com.creation.controller.spring.post.OperatorLoginSC;
-import com.creation.core.application.App;
-import com.creation.core.application.AppConst;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
@@ -18,7 +16,9 @@ public class AuthService {
             OperatorLoginSC loginControl = con.getBean(OperatorLoginSC.class);
             Auth auth = loginControl.getAuth(mail, pass);
             if (auth != null) {
-                App.getObjectCache().put(AppConst.USER_TOKEN, auth);
+                Auth glAuth = con.getBean(Auth.class);
+                glAuth.setToken(auth.getToken());
+                glAuth.setUser(auth.getUser());
                 return true;
             } else return false;
         }
