@@ -2,6 +2,8 @@ package com.creation.view.frames;
 
 import com.creation.view.core.SwingProps;
 import com.creation.view.elements.HTextField;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
@@ -9,7 +11,8 @@ import java.awt.*;
 
 @Component
 public class MainFrame extends JFrame {
-    private JButton button1;
+    @Autowired
+    ApplicationContext con;
     boolean isFilterClicked = true;
     private JButton button3;
     private JPanel panel1;
@@ -31,6 +34,7 @@ public class MainFrame extends JFrame {
 
     int sizeWidth = 800;
     int sizeHeight = 600;
+    private JButton profileButton;
 
     public MainFrame() {
         setTitle("Market Place");
@@ -44,7 +48,7 @@ public class MainFrame extends JFrame {
     private void createUIComponents() {
         splitPane1 = new JSplitPane();
         panel1 = new JPanel();
-        button1 = new JButton("Hello");
+        profileButton = new JButton("Hello");
         ApplyFilterProdButton = new JButton("Hi");
         button3 = new JButton("Buy");
         searchButton = new JButton();
@@ -82,6 +86,12 @@ public class MainFrame extends JFrame {
                 isFilterClicked = true;
             }
 
+        });
+
+        profileButton.addActionListener(e -> {
+            ProfileFrame profile = con.getBean(ProfileFrame.class);
+            profile.myProfile();
+            profile.setVisible(true);
         });
         /*
         Product product = new Product();

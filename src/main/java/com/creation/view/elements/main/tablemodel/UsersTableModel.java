@@ -1,17 +1,10 @@
 package com.creation.view.elements.main.tablemodel;
 
-import javax.swing.table.AbstractTableModel;
-
-public abstract class ItemTableModel extends AbstractTableModel {
-
-    @Override
-    public int getRowCount() {
-        return 0;
-    }
+public class UsersTableModel extends ItemTableModel {
 
     @Override
     public int getColumnCount() {
-        return 1;
+        return 6;
     }
 
     @Override
@@ -23,5 +16,4 @@ public abstract class ItemTableModel extends AbstractTableModel {
     public boolean isCellEditable(int rowIndex, int columnIndex) {
         return false;
     }
-
 }
