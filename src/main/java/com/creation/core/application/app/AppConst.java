@@ -1,4 +1,4 @@
-package com.creation.core.application;
+package com.creation.core.application.app;
 
 public class AppConst {
     //Cache objects constants
