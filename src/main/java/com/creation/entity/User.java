@@ -6,27 +6,19 @@ public class User implements Entity {
 
     int id;
     String email;
-    int phone;
-    String firstName;
-    String lastName;
-    String status;
-    Date confirmed_at;
-    Date rewiewed_at;
+    String first_name;
+    String last_name;
     Date created_at;
     Date updated_at;
 
     public User() {
     }
 
-    public User(int id, String email, int phone, String firstName, String lastName, String status, Date confirmed_at, Date rewiewed_at, Date created_at, Date updated_at) {
+    public User(int id, String email, String first_name, String last_name, Date created_at, Date updated_at) {
         this.id = id;
         this.email = email;
-        this.phone = phone;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.status = status;
-        this.confirmed_at = confirmed_at;
-        this.rewiewed_at = rewiewed_at;
+        this.first_name = first_name;
+        this.last_name = last_name;
         this.created_at = created_at;
         this.updated_at = updated_at;
     }
@@ -47,52 +39,20 @@ public class User implements Entity {
         this.email = email;
     }
 
-    public int getPhone() {
-        return phone;
+    public String getFirst_name() {
+        return first_name;
     }
 
-    public void setPhone(int phone) {
-        this.phone = phone;
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getLast_name() {
+        return last_name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public Date getConfirmed_at() {
-        return confirmed_at;
-    }
-
-    public void setConfirmed_at(Date confirmed_at) {
-        this.confirmed_at = confirmed_at;
-    }
-
-    public Date getRewiewed_at() {
-        return rewiewed_at;
-    }
-
-    public void setRewiewed_at(Date rewiewed_at) {
-        this.rewiewed_at = rewiewed_at;
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
 
     public Date getCreated_at() {

@@ -1,5 +1,6 @@
 package com.creation.view.frames;
 
+import com.creation.entity.Auth;
 import com.creation.view.core.SwingProps;
 import com.creation.view.elements.HTextField;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -93,7 +94,7 @@ public class MainFrame extends JFrame {
 
         profileButton.addActionListener(e -> {
             ProfileFrame profile = con.getBean(ProfileFrame.class);
-            profile.myProfile();
+            profile.setUser(con.getBean(Auth.class).getUser());
             profile.setVisible(true);
         });
 

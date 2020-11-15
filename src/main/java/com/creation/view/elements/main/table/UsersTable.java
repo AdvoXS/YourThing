@@ -32,7 +32,7 @@ public class UsersTable extends AbstractTable {
         if (!userList.isEmpty()) {
             tableModel.setRowCount(0);
             for (User user : userList) {
-                tableModel.addRow(new Object[]{user.getId(), user.getFirstName(), user.getLastName(), user.getEmail(), user.getCreated_at(), user.getUpdated_at()});
+                tableModel.addRow(new Object[]{user.getId(), user.getFirst_name(), user.getLast_name(), user.getEmail(), user.getCreated_at(), user.getUpdated_at()});
             }
         } else {
             SwingAction ed = con.getBean(SwingAction.class);

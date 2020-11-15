@@ -1,17 +1,25 @@
 package com.creation.view.frames;
 
-import com.creation.entity.Auth;
 import com.creation.entity.User;
+import com.creation.service.UserUpdateService;
+import com.creation.view.core.SwingAction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.HashMap;
 
 @Component
 public class ProfileFrame extends JFrame {
+
     @Autowired
-    Auth auth;
+    UserUpdateService service;
+
+    @Autowired
+    SwingAction swingAction;
+
+    User user;
 
     private boolean isEdit = false;
     private boolean isMyProfile = true;
@@ -61,27 +69,29 @@ public class ProfileFrame extends JFrame {
         // TODO: place custom component creation code here
     }
 
-    public void update() {
+
+    /*public void update() {
         if (isMyProfile) myProfile();
+    }*/
+
+    public void setUser(User user) {
+        this.user = user;
+        updateInfo();
     }
 
-    public void myProfile() {
-        isMyProfile = true;
-        updateInfo(auth.getUser());
-    }
+    /*private User getUser() {
+        if (isMyProfile && auth != null) return auth.getUser();
+        else if (!isMyProfile && otherUser != null) return otherUser;
+        else throw new RuntimeException("Ошибка получения пользователя");
+    }*/
 
-    public void otherProfile(User user) {
-        isMyProfile = false;
-        updateInfo(user);
-    }
-
-    private void updateInfo(User user) {
-        textField1.setText(user.getFirstName());
-        textField2.setText(user.getLastName());
+    private void updateInfo() {
+        textField1.setText(user.getFirst_name());
+        textField2.setText(user.getLast_name());
         textField3.setText(user.getEmail());
 
-        firstNameInfo.setText(user.getFirstName());
-        secondNameInfo.setText(user.getLastName());
+        firstNameInfo.setText(user.getFirst_name());
+        secondNameInfo.setText(user.getLast_name());
         emailInfo.setText(user.getEmail());
     }
 
@@ -89,19 +99,39 @@ public class ProfileFrame extends JFrame {
         editButton = new JButton();
         editButton.addActionListener(e -> {
             if (!isEdit) {
-                infoPanel1.setVisible(false);
-                editPanel.setVisible(true);
-                editButton.setText("Сохранить");
-                editAvaPanel.setVisible(true);
-                isEdit = true;
+                setEdit();
             } else {
-                infoPanel1.setVisible(true);
-                editPanel.setVisible(false);
-                editButton.setText("Изменить");
-                editAvaPanel.setVisible(false);
-                isEdit = false;
+                user = service.updateUser(user, getParams());
+                setNotEdit();
             }
         });
+    }
+
+
+    private HashMap<String, String> getParams() {
+        HashMap<String, String> params = new HashMap<>(3);
+        params.put("name", textField1.getText());
+        params.put("second_name", textField2.getText());
+        params.put("email", textField3.getText());
+        return params;
+    }
+
+    private void setEdit() {
+        infoPanel1.setVisible(false);
+        editPanel.setVisible(true);
+        editButton.setText("Сохранить");
+        editAvaPanel.setVisible(true);
+        isEdit = true;
+        updateInfo();
+    }
+
+    private void setNotEdit() {
+        infoPanel1.setVisible(true);
+        editPanel.setVisible(false);
+        editButton.setText("Изменить");
+        editAvaPanel.setVisible(false);
+        isEdit = false;
+        updateInfo();
     }
 
     private void setsCloseButton() {
