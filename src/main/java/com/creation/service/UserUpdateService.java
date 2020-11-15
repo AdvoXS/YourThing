@@ -2,7 +2,6 @@ package com.creation.service;
 
 import com.creation.controller.spring.patch.UserUpdateSC;
 import com.creation.entity.User;
-import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,8 +12,6 @@ public class UserUpdateService {
     @Autowired
     UserUpdateSC contr;
 
-    @Autowired
-    Gson parser;
 
     public User updateUser(User user, HashMap<String, String> params) {
         if (user != null) {

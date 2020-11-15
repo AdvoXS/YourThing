@@ -17,10 +17,13 @@ import reactor.core.publisher.Mono;
 public class UserUpdateSC extends SController {
     @Autowired
     Auth auth;
+
+    @Autowired
+    Gson parser;
+
     Logger logger = LogManager.getLogger(UserUpdateSC.class.getSimpleName());
 
     public String updateUser(User updatedUser) {
-        Gson parser = new Gson();
         String jsonPatch = parser.toJson(updatedUser);
         Mono<String> updateUserMono = webClient.method(HttpMethod.PATCH)
                 .uri("/users/" + updatedUser.getId())

@@ -1,4 +1,4 @@
-package com.creation.controller.config;
+package com.creation.config;
 
 import com.google.gson.Gson;
 import org.springframework.context.annotation.Bean;
