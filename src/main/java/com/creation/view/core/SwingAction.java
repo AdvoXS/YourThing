@@ -1,19 +1,21 @@
 package com.creation.view.core;
 
 import com.creation.view.frames.ErrorDialog;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class SwingAction {
-    public static void displayError(String head, String text) {
-        createErrorDialog().setErrorText(head, text);
+    @Autowired
+    ErrorDialog dialog;
+
+    public void displayError(String head, String text) {
+        dialog.setErrorText(head, text);
+        dialog.setVisible(true);
     }
 
-    public static void displayError(String text) {
-        createErrorDialog().setErrorText(text);
-    }
-
-    private static ErrorDialog createErrorDialog() {
-        ErrorDialog errorDialog = new ErrorDialog();
-        errorDialog.setVisible(true);
-        return errorDialog;
+    public void displayError(String text) {
+        dialog.setErrorText(text);
+        dialog.setVisible(true);
     }
 }

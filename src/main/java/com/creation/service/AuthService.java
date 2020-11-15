@@ -1,6 +1,7 @@
-package com.creation.restobject.auth;
+package com.creation.service;
 
 import com.creation.controller.spring.post.OperatorLoginSC;
+import com.creation.entity.Auth;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;

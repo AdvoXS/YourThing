@@ -1,6 +1,12 @@
 package com.creation.view.elements.main.tablemodel;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class UsersTableModel extends ItemTableModel {
+
+    public UsersTableModel() {
+    }
 
     @Override
     public int getColumnCount() {

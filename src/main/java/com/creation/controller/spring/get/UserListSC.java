@@ -2,8 +2,8 @@ package com.creation.controller.spring.get;
 
 import com.creation.controller.spring.SController;
 import com.creation.core.application.Rests;
-import com.creation.restobject.UsersList;
-import com.creation.restobject.auth.Auth;
+import com.creation.entity.Auth;
+import com.creation.service.UsersList;
 import com.google.gson.Gson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -43,7 +43,7 @@ public class UserListSC extends SController {
         return getResult(authMono);
     }
 
-    public UsersList getResult(Mono<String> authMono) {
+    private UsersList getResult(Mono<String> authMono) {
         String result = authMono.block();
         if (!StringUtils.isEmpty(result) && result.contains("Error")) {
             error(result);

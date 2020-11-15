@@ -1,8 +1,8 @@
-package com.creation.restobject;
+package com.creation.service;
 
 import com.creation.controller.spring.post.OperatorLoginSC;
 import com.creation.core.application.app.SpringApplicationConfig;
-import com.creation.restobject.auth.Auth;
+import com.creation.entity.Auth;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;

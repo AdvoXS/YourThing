@@ -1,8 +1,8 @@
 package com.creation.controller.spring.get;
 
 import com.creation.core.application.app.SpringApplicationConfig;
-import com.creation.restobject.UsersList;
-import com.creation.restobject.auth.AuthService;
+import com.creation.service.AuthService;
+import com.creation.service.UsersList;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

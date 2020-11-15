@@ -1,4 +1,4 @@
-package com.creation.restobject;
+package com.creation.service;
 
 import com.creation.entity.User;
 import com.google.gson.annotations.SerializedName;

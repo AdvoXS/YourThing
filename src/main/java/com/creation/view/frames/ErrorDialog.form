@@ -49,20 +49,21 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="b179d" class="javax.swing.JLabel" binding="headerTextF" custom-create="true">
+          <component id="b179d" class="javax.swing.JLabel" binding="descriptionTextF" custom-create="true">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="0" anchor="0" fill="0" indent="1" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Label"/>
             </properties>
           </component>
-          <component id="c659b" class="javax.swing.JLabel" binding="descriptionTextF" custom-create="true">
+          <component id="c659b" class="javax.swing.JLabel" binding="headerTextF" custom-create="true">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="1" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <font name="Fira Code Medium" style="1"/>
+              <font name="Fira Code Medium" size="16" style="1"/>
+              <foreground color="-4498084"/>
               <text value="Label"/>
             </properties>
           </component>

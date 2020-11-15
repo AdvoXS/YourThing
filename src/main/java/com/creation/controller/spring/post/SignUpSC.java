@@ -1,33 +1,31 @@
 package com.creation.controller.spring.post;
 
 import com.creation.controller.spring.SController;
-import com.creation.entity.Auth;
-import com.google.gson.Gson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import reactor.core.publisher.Mono;
 
-
 @Controller
-public class OperatorLoginSC extends SController {
+@Lazy
+public class SignUpSC extends SController {
 
-    Logger logger = LogManager.getLogger(OperatorLoginSC.class.getSimpleName());
+    Logger logger = LogManager.getLogger(SignUpSC.class.getSimpleName());
 
-    public Auth getAuth(String email, String pass) {
+    public boolean getReg(String email, String pass, String doublePass) {
         Mono<String> authMono = webClient
                 .method(HttpMethod.POST)
-                .uri("/operators/login")
-                .body(Mono.just("{\n" +
-                        "    \"credentials\": {\n" +
-                        "        \"email\": \"" + email + "\",\n" +
-                        "        \"password\": \"" + pass + "\"\n" +
-                        "    }\n" +
+                .uri("/users/sign_up")
+                .body(Mono.just("{ \n" +
+                        " \"credentials\": { \n" +
+                        " \"email\": \"" + email + "\", \n" +
+                        " \"password\": \"" + pass + "\", \n" +
+                        " \"password_confirmation\": \"" + doublePass + "\" \n" +
+                        " } \n" +
                         "}"), String.class).exchange().flatMap(clientResponse -> {
-
-
                     if (clientResponse.statusCode().isError()) {
                         return clientResponse.createException().flatMap(Mono::error);
                     }
@@ -36,16 +34,16 @@ public class OperatorLoginSC extends SController {
         return getResult(authMono);
     }
 
-    private Auth getResult(Mono<String> authMono) {
+    private boolean getResult(Mono<String> authMono) {
         String result = authMono.block();
         if (!StringUtils.isEmpty(result) && result.contains("Error")) {
             error(result);
-            return null;
+            return false;
         } else
-            return new Gson().fromJson(result, Auth.class);
+            return true;
     }
 
     private void error(String error) {
-        logger.error("Failed authorization... " + error);
+        logger.error("Failed registration... " + error);
     }
 }

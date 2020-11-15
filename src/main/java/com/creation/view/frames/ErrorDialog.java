@@ -10,8 +10,8 @@ import java.awt.event.*;
 @Component
 public class ErrorDialog extends JDialog {
     private JPanel contentPane;
-    private JLabel headerTextF;
     private JLabel descriptionTextF;
+    private JLabel headerTextF;
     private JButton buttonCancel;
 
     public ErrorDialog() {
@@ -19,9 +19,9 @@ public class ErrorDialog extends JDialog {
         setModal(true);
         getRootPane().setDefaultButton(buttonCancel);
         setTitle("Error");
-        setPreferredSize(new Dimension(200, 100));
+        setPreferredSize(new Dimension(500, 200));
         SwingProps.setStartWindowCenter(this, 200, 100);
-
+        pack();
         buttonCancel.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onCancel();
@@ -55,11 +55,12 @@ public class ErrorDialog extends JDialog {
     }
 
     private void createUIComponents() {
-        headerTextF = new JLabel();
         descriptionTextF = new JLabel();
+        headerTextF = new JLabel();
     }
 
     public void setErrorText(String errorText) {
+        headerTextF.setText("Ошибка пользователя");
         descriptionTextF.setText(errorText);
     }
 

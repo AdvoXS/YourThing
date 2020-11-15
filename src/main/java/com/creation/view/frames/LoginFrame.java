@@ -1,6 +1,6 @@
 package com.creation.view.frames;
 
-import com.creation.restobject.auth.AuthService;
+import com.creation.service.AuthService;
 import com.creation.view.core.SwingAction;
 import com.creation.view.core.SwingProps;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +14,14 @@ import java.awt.*;
 public class LoginFrame extends JFrame {
     @Autowired
     ApplicationContext context;
+
     private JTextField loginField;
     private JButton cancelButton;
     private JPanel mainPanel;
     private JButton enterButton;
     private JPasswordField passwordField;
+    private JButton registerButton;
+    private JLabel registerLabel;
 
     public LoginFrame() {
         setTitle("Your Things");
@@ -43,11 +46,20 @@ public class LoginFrame extends JFrame {
             if (context.getBean(AuthService.class).initAuth(mail, pass)) {
                 startApp();
             } else {
-                SwingAction.displayError("Ошибка авторизации. Проверьте правильность ввода пароля и почты");
+                SwingAction swAction = context.getBean(SwingAction.class);
+                swAction.displayError("Ошибка авторизации. Проверьте правильность ввода пароля и почты");
             }
         });
         cancelButton.addActionListener(e -> System.exit(0));
+        registerButton = new JButton();
+        registerButton.addActionListener(e -> {
+            openRegister();
+        });
         setTestAuthInfo();
+    }
+
+    public void setEMail(String mail) {
+        loginField.setText(mail);
     }
 
     /**
@@ -55,6 +67,12 @@ public class LoginFrame extends JFrame {
      */
     private void setTestAuthInfo() {
         loginField.setText("operator@test.ru");
+    }
+
+    private void openRegister() {
+        RegisterFrame registerFrame = context.getBean(RegisterFrame.class);
+        registerFrame.setVisible(true);
+        this.setVisible(false);
     }
 
     private void startApp() {

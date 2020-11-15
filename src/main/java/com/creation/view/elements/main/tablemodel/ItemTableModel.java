@@ -1,8 +1,11 @@
 package com.creation.view.elements.main.tablemodel;
 
-import javax.swing.table.AbstractTableModel;
+import org.springframework.stereotype.Component;
 
-public abstract class ItemTableModel extends AbstractTableModel {
+import javax.swing.table.DefaultTableModel;
+
+@Component
+public abstract class ItemTableModel extends DefaultTableModel {
 
     @Override
     public int getRowCount() {

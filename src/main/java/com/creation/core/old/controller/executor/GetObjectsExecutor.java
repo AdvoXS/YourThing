@@ -1,12 +1,10 @@
 package com.creation.core.old.controller.executor;
 
 import com.creation.core.old.controller.get.GetObjectController;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.logging.Logger;
 
-@Service
 public class GetObjectsExecutor extends RestExecutor {
 
     GetObjectController getController;

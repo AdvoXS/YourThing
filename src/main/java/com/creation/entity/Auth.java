@@ -1,7 +1,8 @@
-package com.creation.restobject.auth;
+package com.creation.entity;
 
-import com.creation.entity.User;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Auth {
 
     User owner;

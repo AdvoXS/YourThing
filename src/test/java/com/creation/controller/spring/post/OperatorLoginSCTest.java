@@ -1,7 +1,7 @@
 package com.creation.controller.spring.post;
 
 import com.creation.core.application.app.SpringApplicationConfig;
-import com.creation.restobject.auth.Auth;
+import com.creation.entity.Auth;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

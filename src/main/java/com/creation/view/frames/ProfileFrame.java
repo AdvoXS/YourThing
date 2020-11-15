@@ -1,7 +1,7 @@
 package com.creation.view.frames;
 
+import com.creation.entity.Auth;
 import com.creation.entity.User;
-import com.creation.restobject.auth.Auth;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -12,6 +12,7 @@ import java.awt.*;
 public class ProfileFrame extends JFrame {
     @Autowired
     Auth auth;
+
     private boolean isEdit = false;
     private boolean isMyProfile = true;
     private JButton closeButton;
@@ -67,6 +68,11 @@ public class ProfileFrame extends JFrame {
     public void myProfile() {
         isMyProfile = true;
         updateInfo(auth.getUser());
+    }
+
+    public void otherProfile(User user) {
+        isMyProfile = false;
+        updateInfo(user);
     }
 
     private void updateInfo(User user) {

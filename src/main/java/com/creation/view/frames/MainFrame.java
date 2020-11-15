@@ -13,6 +13,7 @@ import java.awt.*;
 public class MainFrame extends JFrame {
     @Autowired
     ApplicationContext con;
+
     boolean isFilterClicked = true;
     private JButton button3;
     private JPanel panel1;
@@ -36,6 +37,7 @@ public class MainFrame extends JFrame {
     int sizeHeight = 600;
     private JButton profileButton;
     private JButton marketButton;
+    private JTable viewTable;
 
     public MainFrame() {
         setTitle("Market Place");
@@ -94,10 +96,7 @@ public class MainFrame extends JFrame {
             profile.myProfile();
             profile.setVisible(true);
         });
-        /*
-        Product product = new Product();
-        product.setTitle("Car");
-        product.setDescription("description of this product");
-        searchPanel.add(new RowProductCreator().createItem(product));*/
+
+        viewTable = new JTable();
     }
 }
