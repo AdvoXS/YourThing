@@ -1,14 +1,21 @@
 package com.creation.view.frames;
 
 import com.creation.entity.Auth;
+import com.creation.service.UserListService;
 import com.creation.view.core.SwingProps;
 import com.creation.view.elements.HTextField;
+import com.creation.view.elements.main.table.AbstractTable;
+import com.creation.view.elements.main.table.UsersTable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.*;
+import java.util.Objects;
 
 @Component
 public class MainFrame extends JFrame {
@@ -38,7 +45,19 @@ public class MainFrame extends JFrame {
     int sizeHeight = 600;
     private JButton profileButton;
     private JButton marketButton;
-    private JTable viewTable;
+    private final String SEARCH_BY_PROFILES = "По профилям";
+    private final String SEARCH_BY_SHOP = "По магазинам";
+    private final String SEARCH_BY_GOODS = "По товарам";
+    private AbstractTable viewTable;
+    private JScrollPane scrollPaneT;
+    private JPanel filterUserPanel;
+    private JTextField filterUserField;
+    private JButton filterUserApplyBut;
+    private JLabel filterUserNameLabel;
+    private JPanel controlPanel;
+    private JButton controlAddButton;
+    private JTextField filterUserSNameField;
+    private JTextField filterUserMailField;
 
     public MainFrame() {
         setTitle("Market Place");
@@ -50,8 +69,7 @@ public class MainFrame extends JFrame {
     }
 
     private void createUIComponents() {
-        splitPane1 = new JSplitPane();
-        panel1 = new JPanel();
+
         profileButton = new JButton("Hello");
         ApplyFilterProdButton = new JButton("Hi");
         button3 = new JButton("Buy");
@@ -66,17 +84,13 @@ public class MainFrame extends JFrame {
         searchByBox = new JComboBox<String>();
         searchByBox.addItem("По товарам");
         searchByBox.addItem("По магазинам");
+        searchByBox.addItem("По профилям");
 
         filterPanelProduct = new JPanel();
         CostFromTextF = new HTextField("Стоимость от");
         CostToTextF = new HTextField("Стоимость до");
 
         CategoryProductBox = new JComboBox<String>();
-        CategoryProductBox.addItem("Верхняя одежда");
-        CategoryProductBox.addItem("Штаны");
-        CategoryProductBox.addItem("Шорты");
-        CategoryProductBox.addItem("Футболки");
-        CategoryProductBox.addItem("Украшения");
 
         filterBut.setBackground(Color.WHITE);
         filterBut.addActionListener((e) -> {
@@ -98,6 +112,88 @@ public class MainFrame extends JFrame {
             profile.setVisible(true);
         });
 
-        viewTable = new JTable();
+
+        scrollPaneT = new JScrollPane();
+        viewTable = new AbstractTable();
+        setControlPanel();
+        setFilterUserPanel();
+        searchByBox.addActionListener(e -> {
+            switch (searchByBox.getSelectedItem().toString()) {
+                case SEARCH_BY_PROFILES:
+                    showUserPanel();
+                    break;
+                case SEARCH_BY_GOODS:
+                    filterPanelProduct.setVisible(true);
+                    filterUserPanel.setVisible(false);
+                    break;
+            }
+        });
+    }
+
+    private void setControlPanel() {
+        controlPanel = new JPanel();
+        controlAddButton = new JButton();
+    }
+
+    private void showUserPanel() {
+        filterPanelProduct.setVisible(false);
+        filterUserPanel.setVisible(true);
+    }
+
+    private void setFilterUserPanel() {
+        filterUserPanel = new JPanel();
+        filterUserPanel.setVisible(false);
+        filterUserApplyBut = new JButton();
+        filterUserApplyBut.addActionListener(e -> {
+            if (Objects.equals(searchByBox.getSelectedItem(), "По профилям")) {
+                viewUsersTable();
+            }
+        });
+        filterUserField = new HTextField("");
+        setFilterTextField(filterUserField);
+        filterUserField.setName("filterUserField");
+        filterUserSNameField = new JTextField();
+        setFilterTextField(filterUserSNameField);
+        filterUserSNameField.setName("filterUserSNameField");
+        filterUserMailField = new JTextField();
+        setFilterTextField(filterUserMailField);
+        filterUserMailField.setName("filterUserMailField");
+    }
+
+    private void setFilterTextField(JTextField filterField) {
+        filterField.getDocument().addDocumentListener(new DocumentListener() {
+            public void changedUpdate(DocumentEvent e) {
+                doIt();
+            }
+
+            public void removeUpdate(DocumentEvent e) {
+                doIt();
+            }
+
+            public void insertUpdate(DocumentEvent e) {
+                doIt();
+            }
+
+            private void doIt() {
+                if (StringUtils.isEmpty(filterField.getText())) viewUsersTable();
+                else {
+                    UserListService service = con.getBean(UserListService.class);
+                    if (filterField.getName().contains("filterUserSNameField"))
+                        viewTable.fillTable(service.filterBySecondName(filterField.getText()));
+                    else if (filterField.getName().contains("filterUserField"))
+                        viewTable.fillTable(service.filterByName(filterField.getText()));
+                    else if (filterField.getName().contains("filterUserMailField"))
+                        viewTable.fillTable(service.filterByEmail(filterField.getText()));
+                    scrollPaneT.setViewportView(viewTable);
+                }
+            }
+        });
+    }
+
+    public void viewUsersTable() {
+        viewTable = con.getBean(UsersTable.class);
+        UserListService service = con.getBean(UserListService.class);
+        viewTable.fillTable(service.getAllUsers());
+        scrollPaneT.setViewportView(viewTable);
     }
 }

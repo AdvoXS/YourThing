@@ -1,6 +1,5 @@
-package com.creation.service;
+package com.creation.entity;
 
-import com.creation.entity.User;
 import com.google.gson.annotations.SerializedName;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
@@ -20,5 +19,6 @@ public class UsersList {
     public ArrayList<User> getUserList() {
         return users;
     }
+
 
 }

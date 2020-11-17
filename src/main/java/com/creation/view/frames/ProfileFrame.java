@@ -11,7 +11,7 @@ import java.awt.*;
 import java.util.HashMap;
 
 @Component
-public class ProfileFrame extends JFrame {
+public class ProfileFrame extends AbstractFrame {
 
     @Autowired
     UserUpdateService service;
@@ -22,7 +22,6 @@ public class ProfileFrame extends JFrame {
     User user;
 
     private boolean isEdit = false;
-    private boolean isMyProfile = true;
     private JButton closeButton;
 
     private JPanel ProfilePanel;
@@ -69,21 +68,11 @@ public class ProfileFrame extends JFrame {
         // TODO: place custom component creation code here
     }
 
-
-    /*public void update() {
-        if (isMyProfile) myProfile();
-    }*/
-
     public void setUser(User user) {
         this.user = user;
         updateInfo();
     }
 
-    /*private User getUser() {
-        if (isMyProfile && auth != null) return auth.getUser();
-        else if (!isMyProfile && otherUser != null) return otherUser;
-        else throw new RuntimeException("Ошибка получения пользователя");
-    }*/
 
     private void updateInfo() {
         textField1.setText(user.getFirst_name());
@@ -137,5 +126,21 @@ public class ProfileFrame extends JFrame {
     private void setsCloseButton() {
         closeButton = new JButton();
         closeButton.addActionListener(e -> this.setVisible(false));
+    }
+
+    @Override
+    public void visible(boolean isVisible, HashMap<String, Object> params) {
+        super.visible(isVisible, params);
+        user = (User) params.get("User");
+        updateInfo();
+        setNotEdit();
+    }
+
+    @Override
+    public void visible(boolean isVisible, Object obj) {
+        super.visible(isVisible, obj);
+        user = (User) obj;
+        updateInfo();
+        setNotEdit();
     }
 }
