@@ -23,16 +23,18 @@ public class UserListService {
     }
 
     public ArrayList<User> filterByName(String str) {
-        return (ArrayList<User>) getUsers().stream().filter(e -> e.getFirst_name().contains(str)).collect(Collectors.toList());
+        return (ArrayList<User>) getUsers().stream().filter(e -> e.getFirst_name() != null && e.getFirst_name().contains(str)).collect(Collectors.toList());
+
     }
 
     public ArrayList<User> filterBySecondName(String str) {
-        return (ArrayList<User>) getUsers().stream().filter(e -> e.getLast_name().contains(str)).collect(Collectors.toList());
+        return (ArrayList<User>) getUsers().stream().filter(e -> e.getLast_name() != null && e.getLast_name().contains(str)).collect(Collectors.toList());
     }
 
     public ArrayList<User> filterByEmail(String str) {
-        return (ArrayList<User>) getUsers().stream().filter(e -> e.getEmail().contains(str)).collect(Collectors.toList());
+        return (ArrayList<User>) getUsers().stream().filter(e -> e.getEmail() != null && e.getEmail().contains(str)).collect(Collectors.toList());
     }
+
 
     private ArrayList<User> getUsers() {
         if (auth.isOperator()) {

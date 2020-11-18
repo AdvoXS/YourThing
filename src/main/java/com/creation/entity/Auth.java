@@ -37,7 +37,7 @@ public class Auth {
         return isOperator;
     }
 
-    public void setOperator(boolean opeator) {
-        isOperator = opeator;
+    public void setOperator(boolean operator) {
+        isOperator = operator;
     }
 }

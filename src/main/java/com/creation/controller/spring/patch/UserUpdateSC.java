@@ -4,22 +4,28 @@ import com.creation.controller.spring.SController;
 import com.creation.core.application.Rests;
 import com.creation.entity.Auth;
 import com.creation.entity.User;
+import com.creation.view.core.SwingAction;
 import com.google.gson.Gson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import reactor.core.publisher.Mono;
 
 @Controller
+@Lazy
 public class UserUpdateSC extends SController {
     @Autowired
     Auth auth;
 
     @Autowired
     Gson parser;
+
+    @Autowired
+    SwingAction swingAction;
 
     Logger logger = LogManager.getLogger(UserUpdateSC.class.getSimpleName());
 
@@ -50,6 +56,8 @@ public class UserUpdateSC extends SController {
     }
 
     private void error(String error) {
-        logger.error("Failed updates user... " + error);
+        String errorMsg = "Failed user update... " + error;
+        logger.error(errorMsg);
+        swingAction.displayError(errorMsg);
     }
 }

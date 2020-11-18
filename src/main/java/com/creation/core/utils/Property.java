@@ -8,7 +8,7 @@ public class Property extends Properties {
     public Property() {
         super();
         try {
-            load(new FileReader("./src/main/resources/project_properties.xml"));
+            load(new FileReader("./src/main/resources/proj.properties"));
         } catch (IOException e) {
             e.printStackTrace();
         }

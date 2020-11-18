@@ -186,6 +186,7 @@ public class MainFrame extends JFrame {
                         viewTable.fillTable(service.filterByEmail(filterField.getText()));
                     scrollPaneT.setViewportView(viewTable);
                 }
+                filterField.revalidate();
             }
         });
     }
