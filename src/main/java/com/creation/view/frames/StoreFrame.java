@@ -4,5 +4,8 @@ import javax.swing.*;
 
 public class StoreFrame {
     private JButton вКорзинуButton;
-    private JButton купитьButton;
+    private JButton связатьсяButton;
+    private JButton изменитьButton;
+    private JTextArea textArea1;
+    private JTextArea textArea2;
 }
