@@ -178,12 +178,7 @@ public class MainFrame extends JFrame {
                 if (StringUtils.isEmpty(filterField.getText())) viewUsersTable();
                 else {
                     UserListService service = con.getBean(UserListService.class);
-                    if (filterField.getName().contains("filterUserSNameField"))
-                        viewTable.fillTable(service.filterBySecondName(filterField.getText()));
-                    else if (filterField.getName().contains("filterUserField"))
-                        viewTable.fillTable(service.filterByName(filterField.getText()));
-                    else if (filterField.getName().contains("filterUserMailField"))
-                        viewTable.fillTable(service.filterByEmail(filterField.getText()));
+                    viewTable.fillTable(service.filterUser(filterUserField.getText(), filterUserSNameField.getText(), filterUserMailField.getText()));
                     scrollPaneT.setViewportView(viewTable);
                 }
                 filterField.revalidate();

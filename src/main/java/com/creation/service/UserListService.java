@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 @Service
@@ -33,6 +34,13 @@ public class UserListService {
 
     public ArrayList<User> filterByEmail(String str) {
         return (ArrayList<User>) getUsers().stream().filter(e -> e.getEmail() != null && e.getEmail().contains(str)).collect(Collectors.toList());
+    }
+
+    public ArrayList<User> filterUser(String name, String sName, String mail) {
+        Predicate<User> namePred = s -> s.getFirst_name() != null && name != null && s.getFirst_name().contains(name);
+        Predicate<User> sNamePred = s -> s.getLast_name() != null && sName != null && s.getLast_name().contains(sName);
+        Predicate<User> mailPred = s -> s.getEmail() != null && mail != null && s.getEmail().contains(mail);
+        return (ArrayList<User>) getUsers().stream().filter(namePred.and(sNamePred).and(mailPred)).collect(Collectors.toList());
     }
 
 
