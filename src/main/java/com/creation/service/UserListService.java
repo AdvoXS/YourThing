@@ -1,8 +1,10 @@
 package com.creation.service;
 
 import com.creation.controller.spring.get.UserListSC;
+import com.creation.core.application.UserException;
 import com.creation.entity.Auth;
 import com.creation.entity.User;
+import com.creation.view.core.SwingAction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
@@ -18,6 +20,9 @@ public class UserListService {
 
     @Autowired
     Auth auth;
+
+    @Autowired
+    UserException exc;
 
     public ArrayList<User> getAllUsers() {
         return getUsers();
@@ -48,7 +53,12 @@ public class UserListService {
         if (auth.isOperator()) {
             UserListSC contr = con.getBean(UserListSC.class);
             return contr.getList().getUserList();
-        } else throw new RuntimeException("Недостаточно прав");
+        } else try {
+            throw new Exception("Недостаточно прав");
+        } catch (Exception e) {
+            con.getBean(SwingAction.class).displayError(e.getMessage());
+        }
+        return new ArrayList<>();
     }
 
 }

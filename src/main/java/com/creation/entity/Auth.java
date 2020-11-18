@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Auth {
-    boolean isOperator = true;//TODO:исправить при добавлении обычной авторизации
+    boolean isOperator;//TODO:исправить при добавлении обычной авторизации
 
     User owner;
 

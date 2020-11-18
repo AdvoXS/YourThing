@@ -6,7 +6,6 @@ import com.creation.view.core.SwingProps;
 import com.creation.view.elements.HTextField;
 import com.creation.view.elements.main.table.AbstractTable;
 import com.creation.view.elements.main.table.UsersTable;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -19,7 +18,7 @@ import java.util.Objects;
 
 @Component
 public class MainFrame extends JFrame {
-    @Autowired
+    final
     ApplicationContext con;
 
     boolean isFilterClicked = true;
@@ -59,13 +58,19 @@ public class MainFrame extends JFrame {
     private JTextField filterUserSNameField;
     private JTextField filterUserMailField;
 
-    public MainFrame() {
+    public MainFrame(ApplicationContext con) {
         setTitle("Market Place");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(mainPanel);
         setPreferredSize(new Dimension(sizeWidth, sizeHeight));
         SwingProps.setStartWindowCenter(this, sizeWidth, sizeHeight);
         pack();
+        this.con = con;
+        afterInit();
+    }
+
+    private void afterInit() {
+        if (con.getBean(Auth.class).isOperator()) searchByBox.addItem("По профилям");
     }
 
     private void createUIComponents() {
@@ -84,7 +89,7 @@ public class MainFrame extends JFrame {
         searchByBox = new JComboBox<String>();
         searchByBox.addItem("По товарам");
         searchByBox.addItem("По магазинам");
-        searchByBox.addItem("По профилям");
+
 
         filterPanelProduct = new JPanel();
         CostFromTextF = new HTextField("Стоимость от");
