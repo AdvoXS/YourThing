@@ -19,13 +19,12 @@ public class SignUpSC extends SController {
         Mono<String> authMono = webClient
                 .method(HttpMethod.POST)
                 .uri("/users/sign_up")
-                .body(Mono.just("{ \n" +
-                        " \"credentials\": { \n" +
-                        " \"email\": \"" + email + "\", \n" +
-                        " \"password\": \"" + pass + "\", \n" +
-                        " \"password_confirmation\": \"" + doublePass + "\" \n" +
-                        " } \n" +
-                        "}"), String.class).exchange().flatMap(clientResponse -> {
+                .body(Mono.just(
+                        "{ \n" +
+                                "    \"email\": \"" + email + "\",\n" +
+                                "    \"password\": \"" + pass + "\",\n" +
+                                "    \"password_confirmation\": \"" + doublePass + "\"\n" +
+                                "}"), String.class).exchange().flatMap(clientResponse -> {
                     if (clientResponse.statusCode().isError()) {
                         return clientResponse.createException().flatMap(Mono::error);
                     }

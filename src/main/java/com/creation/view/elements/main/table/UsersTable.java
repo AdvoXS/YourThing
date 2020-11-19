@@ -1,7 +1,6 @@
 package com.creation.view.elements.main.table;
 
 import com.creation.entity.User;
-import com.creation.view.core.SwingAction;
 import com.creation.view.elements.main.tablemodel.UsersTableModel;
 import com.creation.view.frames.ProfileFrame;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,8 +50,7 @@ public class UsersTable extends AbstractTable {
             }
             setModel(tableModel);
         } else {
-            SwingAction ed = con.getBean(SwingAction.class);
-            ed.displayError("Системная ошибка", "Ошибка получения пользователей");
+            tableModel.clear();
         }
     }
 

@@ -4,6 +4,7 @@ import com.creation.entity.User;
 import com.creation.service.UserUpdateService;
 import com.creation.view.core.SwingAction;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
@@ -11,6 +12,7 @@ import java.awt.*;
 import java.util.HashMap;
 
 @Component
+@Lazy
 public class ProfileFrame extends AbstractFrame {
 
     @Autowired

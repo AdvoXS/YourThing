@@ -5,6 +5,7 @@ import com.creation.entity.Auth;
 import com.google.gson.Gson;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
@@ -12,6 +13,7 @@ import reactor.core.publisher.Mono;
 
 
 @Controller
+@Lazy
 public class OperatorLoginSC extends SController {
 
     Logger logger = LogManager.getLogger(OperatorLoginSC.class.getSimpleName());
@@ -26,8 +28,6 @@ public class OperatorLoginSC extends SController {
                         "        \"password\": \"" + pass + "\"\n" +
                         "    }\n" +
                         "}"), String.class).exchange().flatMap(clientResponse -> {
-
-
                     if (clientResponse.statusCode().isError()) {
                         return clientResponse.createException().flatMap(Mono::error);
                     }

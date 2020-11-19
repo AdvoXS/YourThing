@@ -1,6 +1,7 @@
 package com.creation.view.frames;
 
 import com.creation.view.core.SwingProps;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
@@ -8,6 +9,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 @Component
+@Lazy
 public class ErrorDialog extends JDialog {
     private JPanel contentPane;
     private JLabel descriptionTextF;

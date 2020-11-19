@@ -1,6 +1,7 @@
-package com.creation.controller.spring.patch;
+package com.creation.controller.spring.delete;
 
 import com.creation.controller.spring.SController;
+import com.creation.controller.spring.patch.UserUpdateSC;
 import com.creation.core.application.Rests;
 import com.creation.entity.Auth;
 import com.creation.entity.User;
@@ -17,7 +18,7 @@ import reactor.core.publisher.Mono;
 
 @Controller
 @Lazy
-public class UserUpdateSC extends SController {
+public class DeleteUserSC extends SController {
     @Autowired
     Auth auth;
 
@@ -29,15 +30,15 @@ public class UserUpdateSC extends SController {
 
     Logger logger = LogManager.getLogger(UserUpdateSC.class.getSimpleName());
 
-    public String updateUser(User updatedUser) {
-        String jsonPatch = parser.toJson(updatedUser);
-        Mono<String> updateUserMono = webClient.method(HttpMethod.PATCH)
-                .uri("/users/" + updatedUser.getId())
+    public boolean deleteUser(User deletesUser) {
+        String jsonPatch = parser.toJson(deletesUser);
+        Mono<String> updateUserMono = webClient.method(HttpMethod.DELETE)
+                .uri("/users/" + deletesUser.getId())
                 .headers(headers -> {
                     headers.set(Rests.CONTENT_TYPE, Rests.APPLICATION_JSON_VALUE);
                     headers.set(Rests.X_ACCESS_TOKEN, auth.getToken());
                 })
-                .body(Mono.just(jsonPatch), String.class).exchange().flatMap(clientResponse -> {
+                .body(Mono.just("{}"), String.class).exchange().flatMap(clientResponse -> {
                     if (clientResponse.statusCode().isError()) {
                         return clientResponse.createException().flatMap(Mono::error);
                     }
@@ -46,17 +47,17 @@ public class UserUpdateSC extends SController {
         return getResult(updateUserMono);
     }
 
-    private String getResult(Mono<String> authMono) {
+    private boolean getResult(Mono<String> authMono) {
         String result = authMono.block();
         if (!StringUtils.isEmpty(result) && result.contains("Error")) {
             error(result);
-            return result;
+            return false;
         } else
-            return "Complete";
+            return true;
     }
 
     private void error(String error) {
-        String errorMsg = "Failed user update... " + error;
+        String errorMsg = "Failed user delete... " + error;
         logger.error(errorMsg);
         swingAction.displayError(errorMsg);
     }
