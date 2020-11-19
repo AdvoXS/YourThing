@@ -17,7 +17,6 @@ public class AuthService {
 
     public boolean initAuth(String mail, String pass) {
         Property prop = con.getBean(Property.class);
-        Object obj = prop.get("operator.mode");
         boolean isOperator = Boolean.parseBoolean(prop.get("operator.mode").toString());
         return initAuth(isOperator, mail, pass);
     }

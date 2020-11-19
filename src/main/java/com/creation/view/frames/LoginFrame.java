@@ -3,16 +3,17 @@ package com.creation.view.frames;
 import com.creation.service.AuthService;
 import com.creation.view.core.SwingAction;
 import com.creation.view.core.SwingProps;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
 import java.awt.*;
 
 @Component
+@Lazy
 public class LoginFrame extends JFrame {
-    @Autowired
+    final
     ApplicationContext context;
 
     private JTextField loginField;
@@ -23,7 +24,7 @@ public class LoginFrame extends JFrame {
     private JButton registerButton;
     private JLabel registerLabel;
 
-    public LoginFrame() {
+    public LoginFrame(ApplicationContext context) {
         setTitle("Your Things");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(mainPanel);
@@ -32,6 +33,7 @@ public class LoginFrame extends JFrame {
         setPreferredSize(new Dimension(sizeWidth, sizeHeight));
         SwingProps.setStartWindowCenter(this, sizeWidth, sizeHeight);
         pack();
+        this.context = context;
     }
 
 

@@ -15,5 +15,4 @@ public class SController {
             .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
             .defaultUriVariables(Collections.singletonMap("url", "http://api.mskpropusk.com"))
             .build();
-
 }

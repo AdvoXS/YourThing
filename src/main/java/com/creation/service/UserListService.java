@@ -49,6 +49,10 @@ public class UserListService {
     }
 
 
+    public User getUserById(int id) {
+        return getUsers().stream().filter(e -> e.getId() == id).findFirst().get();
+    }
+
     private ArrayList<User> getUsers() {
         if (auth.isOperator()) {
             UserListSC contr = con.getBean(UserListSC.class);

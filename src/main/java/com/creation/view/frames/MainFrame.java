@@ -1,12 +1,16 @@
 package com.creation.view.frames;
 
 import com.creation.entity.Auth;
+import com.creation.entity.User;
+import com.creation.service.DeleteUserService;
 import com.creation.service.UserListService;
+import com.creation.view.core.SwingAction;
 import com.creation.view.core.SwingProps;
 import com.creation.view.elements.HTextField;
 import com.creation.view.elements.main.table.AbstractTable;
 import com.creation.view.elements.main.table.UsersTable;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
@@ -17,10 +21,12 @@ import java.awt.*;
 import java.util.Objects;
 
 @Component
+@Lazy
 public class MainFrame extends JFrame {
     final
     ApplicationContext con;
-
+    final
+    SwingAction swingAction;
     boolean isFilterClicked = true;
     private JButton button3;
     private JPanel panel1;
@@ -57,8 +63,10 @@ public class MainFrame extends JFrame {
     private JButton controlAddButton;
     private JTextField filterUserSNameField;
     private JTextField filterUserMailField;
+    private JButton deleteButton;
+    private JPanel deprecatePanel;
 
-    public MainFrame(ApplicationContext con) {
+    public MainFrame(ApplicationContext con, SwingAction swingAction) {
         setTitle("Market Place");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(mainPanel);
@@ -66,11 +74,15 @@ public class MainFrame extends JFrame {
         SwingProps.setStartWindowCenter(this, sizeWidth, sizeHeight);
         pack();
         this.con = con;
+        this.swingAction = swingAction;
         afterInit();
     }
 
     private void afterInit() {
-        if (con.getBean(Auth.class).isOperator()) searchByBox.addItem("По профилям");
+        if (con.getBean(Auth.class).isOperator()) {
+            Auth gauth = con.getBean(Auth.class);
+            searchByBox.addItem("По профилям");
+        }
     }
 
     private void createUIComponents() {
@@ -90,6 +102,8 @@ public class MainFrame extends JFrame {
         searchByBox.addItem("По товарам");
         searchByBox.addItem("По магазинам");
 
+        deprecatePanel = new JPanel();
+        deprecatePanel.setVisible(false);
 
         filterPanelProduct = new JPanel();
         CostFromTextF = new HTextField("Стоимость от");
@@ -138,6 +152,18 @@ public class MainFrame extends JFrame {
     private void setControlPanel() {
         controlPanel = new JPanel();
         controlAddButton = new JButton();
+        deleteButton = new JButton();
+        deleteButton.addActionListener(e -> {
+            if (viewTable.getSelectedRow() != -1) {
+                int id = (int) viewTable.getValueAt(viewTable.getSelectedRow(), 0);
+                User user = con.getBean(UserListService.class).getUserById(id);
+                if (JOptionPane.showConfirmDialog(this, "Вы действительно хотите удалить пользователя с email " + user.getEmail() + " ?") == 0) {
+                    con.getBean(DeleteUserService.class).delete(user);
+                }
+            } else {
+                swingAction.displayError("Выделите строку с пользователем, которого хотите удалить");
+            }
+        });
     }
 
     private void showUserPanel() {
