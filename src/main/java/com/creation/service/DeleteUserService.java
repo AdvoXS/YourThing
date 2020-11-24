@@ -1,7 +1,8 @@
 package com.creation.service;
 
-import com.creation.controller.spring.delete.DeleteUserSC;
+import com.creation.controller.spring.user.DeleteUserSC;
 import com.creation.entity.Auth;
+import com.creation.entity.Role;
 import com.creation.entity.User;
 import com.creation.view.core.SwingAction;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class DeleteUserService {
     SwingAction swingAction;
 
     public boolean delete(User user) {
-        if (auth.isOperator()) {
+        if (auth.getUser().getRole().equals(Role.OPERATOR)) {
             return contr.deleteUser(user);
         } else {
             swingAction.displayError("Недостаточно прав");

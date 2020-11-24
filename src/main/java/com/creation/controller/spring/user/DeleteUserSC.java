@@ -1,7 +1,6 @@
-package com.creation.controller.spring.delete;
+package com.creation.controller.spring.user;
 
 import com.creation.controller.spring.SController;
-import com.creation.controller.spring.patch.UserUpdateSC;
 import com.creation.core.application.Rests;
 import com.creation.entity.Auth;
 import com.creation.entity.User;

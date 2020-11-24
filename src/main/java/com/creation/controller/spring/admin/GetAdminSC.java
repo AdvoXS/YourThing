@@ -1,35 +1,21 @@
-package com.creation.controller.spring.get;
+package com.creation.controller.spring.admin;
 
-import com.creation.controller.spring.SController;
 import com.creation.core.application.Rests;
-import com.creation.entity.Auth;
-import com.creation.entity.UsersList;
+import com.creation.entity.User;
 import com.google.gson.Gson;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import reactor.core.publisher.Mono;
-
 @Controller
 @Lazy
-public class UserListSC extends SController {
+public class GetAdminSC extends AdminSC {
 
-    @Autowired
-    Auth auth;
-
-    @Autowired
-    UsersList users;
-
-    Logger logger = LogManager.getLogger(UserListSC.class.getSimpleName());
-
-    public UsersList getList() {
+    public User getAdmin(int id) {
         Mono<String> authMono = webClient
                 .method(HttpMethod.GET)
-                .uri("/users")
+                .uri("/admins/"+id)
                 .headers(headers -> {
                     headers.set(Rests.CONTENT_TYPE, Rests.APPLICATION_JSON_VALUE);
                     headers.set(Rests.X_ACCESS_TOKEN, auth.getToken());
@@ -43,18 +29,14 @@ public class UserListSC extends SController {
         return getResult(authMono);
     }
 
-    private UsersList getResult(Mono<String> authMono) {
+    private User getResult(Mono<String> authMono) {
         String result = authMono.block();
         if (!StringUtils.isEmpty(result) && result.contains("Error")) {
             error(result);
             return null;
         } else {
-            users = new Gson().fromJson(result, UsersList.class);
+            return new Gson().fromJson(result, User.class);
         }
-        return users;
     }
 
-    private void error(String error) {
-        logger.error("Failed get list users... " + error);
-    }
 }

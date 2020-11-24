@@ -51,6 +51,9 @@ public class ProfileFrame extends AbstractFrame {
         pack();
     }
 
+    static {
+
+    }
     private void createUIComponents() {
         setsCloseButton();
         setsEditButton();

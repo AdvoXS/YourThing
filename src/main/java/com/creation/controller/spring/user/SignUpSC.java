@@ -1,4 +1,4 @@
-package com.creation.controller.spring.post;
+package com.creation.controller.spring.user;
 
 import com.creation.controller.spring.SController;
 import org.apache.logging.log4j.LogManager;

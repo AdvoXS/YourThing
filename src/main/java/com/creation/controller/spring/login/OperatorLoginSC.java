@@ -1,22 +1,15 @@
-package com.creation.controller.spring.post;
+package com.creation.controller.spring.login;
 
-import com.creation.controller.spring.SController;
 import com.creation.entity.Auth;
-import com.google.gson.Gson;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.StringUtils;
 import reactor.core.publisher.Mono;
 
 
 @Controller
 @Lazy
-public class OperatorLoginSC extends SController {
-
-    Logger logger = LogManager.getLogger(OperatorLoginSC.class.getSimpleName());
+public class OperatorLoginSC extends LoginSC {
 
     public Auth getAuth(String email, String pass) {
         Mono<String> authMono = webClient
@@ -36,16 +29,4 @@ public class OperatorLoginSC extends SController {
         return getResult(authMono);
     }
 
-    private Auth getResult(Mono<String> authMono) {
-        String result = authMono.block();
-        if (!StringUtils.isEmpty(result) && result.contains("Error")) {
-            error(result);
-            return null;
-        } else
-            return new Gson().fromJson(result, Auth.class);
-    }
-
-    private void error(String error) {
-        logger.error("Failed authorization... " + error);
-    }
 }

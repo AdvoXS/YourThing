@@ -10,6 +10,8 @@ public class User implements Entity {
     String last_name;
     Date created_at;
     Date updated_at;
+    String phone;
+    Role role;
 
     public User() {
     }
@@ -21,6 +23,22 @@ public class User implements Entity {
         this.last_name = last_name;
         this.created_at = created_at;
         this.updated_at = updated_at;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     public int getId() {
