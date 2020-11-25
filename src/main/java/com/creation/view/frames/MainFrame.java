@@ -1,6 +1,7 @@
 package com.creation.view.frames;
 
 import com.creation.entity.Auth;
+import com.creation.entity.Role;
 import com.creation.entity.User;
 import com.creation.service.DeleteUserService;
 import com.creation.service.UserListService;
@@ -9,7 +10,9 @@ import com.creation.view.core.SwingProps;
 import com.creation.view.elements.HTextField;
 import com.creation.view.elements.main.table.AbstractTable;
 import com.creation.view.elements.main.table.UsersTable;
+import com.creation.view.service.MainFrameService;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -18,15 +21,22 @@ import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
+import java.util.HashSet;
 import java.util.Objects;
 
 @Component
 @Lazy
+@DependsOn({"mainFrameService"})
 public class MainFrame extends JFrame {
     final
     ApplicationContext con;
     final
     SwingAction swingAction;
+
+    private HashSet<JComponent> adminComponents;
+    private HashSet<JComponent> operatorComponents;
+    private HashSet<JComponent> salerComponents;
+
     boolean isFilterClicked = true;
     private JButton button3;
     private JPanel panel1;
@@ -66,6 +76,11 @@ public class MainFrame extends JFrame {
     private JButton deleteButton;
     private JPanel deprecatePanel;
 
+    {
+        salerComponents = new HashSet<>();
+        salerComponents.add(marketButton);
+    }
+
     public MainFrame(ApplicationContext con, SwingAction swingAction) {
         setTitle("Market Place");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -75,18 +90,22 @@ public class MainFrame extends JFrame {
         pack();
         this.con = con;
         this.swingAction = swingAction;
-        afterInit();
+        afterInit(con);
+        setVisibleByRole(con);
     }
 
-    private void afterInit() {
-        if (con.getBean(Auth.class).isOperator()) {
-            Auth gauth = con.getBean(Auth.class);
-            searchByBox.addItem("По профилям");
-        }
+    private void afterInit(ApplicationContext con) {
+        Auth auth = con.getBean(Auth.class);
+        if (auth.getUser().getRole().equals(Role.OPERATOR) || auth.getUser().getRole().equals(Role.ADMIN))
+            searchByBox.addItem(SEARCH_BY_PROFILES);
+    }
+
+    private void setVisibleByRole(ApplicationContext con) {
+        MainFrameService service = con.getBean(MainFrameService.class);
+        service.visibleByRoleSaler(con.getBean(Auth.class), salerComponents);
     }
 
     private void createUIComponents() {
-
         profileButton = new JButton("Hello");
         ApplyFilterProdButton = new JButton("Hi");
         button3 = new JButton("Buy");
@@ -98,9 +117,9 @@ public class MainFrame extends JFrame {
         marketButton = new JButton();
         filterPanel1 = new JPanel();
         searchByLabel = new JLabel("Поиск по");
-        searchByBox = new JComboBox<String>();
-        searchByBox.addItem("По товарам");
-        searchByBox.addItem("По магазинам");
+        searchByBox = new JComboBox<>();
+        searchByBox.addItem(SEARCH_BY_GOODS);
+        searchByBox.addItem(SEARCH_BY_SHOP);
 
         deprecatePanel = new JPanel();
         deprecatePanel.setVisible(false);
@@ -109,10 +128,10 @@ public class MainFrame extends JFrame {
         CostFromTextF = new HTextField("Стоимость от");
         CostToTextF = new HTextField("Стоимость до");
 
-        CategoryProductBox = new JComboBox<String>();
+        CategoryProductBox = new JComboBox<>();
 
         filterBut.setBackground(Color.WHITE);
-        filterBut.addActionListener((e) -> {
+        filterBut.addActionListener(e -> {
             if (isFilterClicked) {
                 filterPanel1.setVisible(false);
                 filterPanelProduct.setVisible(false);
@@ -122,7 +141,6 @@ public class MainFrame extends JFrame {
                 filterPanelProduct.setVisible(true);
                 isFilterClicked = true;
             }
-
         });
 
         profileButton.addActionListener(e -> {
@@ -130,7 +148,6 @@ public class MainFrame extends JFrame {
             profile.setUser(con.getBean(Auth.class).getUser());
             profile.setVisible(true);
         });
-
 
         scrollPaneT = new JScrollPane();
         viewTable = new AbstractTable();

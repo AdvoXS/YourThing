@@ -1,6 +1,6 @@
 package com.creation.service;
 
-import com.creation.controller.spring.post.OperatorLoginSC;
+import com.creation.controller.spring.login.OperatorLoginSC;
 import com.creation.core.application.app.SpringApplicationConfig;
 import com.creation.entity.Auth;
 import org.junit.Assert;

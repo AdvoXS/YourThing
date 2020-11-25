@@ -1,19 +1,11 @@
 package com.creation.core.application;
 
-import com.creation.view.core.SwingAction;
-import org.springframework.stereotype.Component;
+import javax.swing.*;
 
-@Component
 public class UserException extends RuntimeException {
-    final
-    SwingAction swingAction;
 
-    public UserException(SwingAction swingAction) {
-        this.swingAction = swingAction;
-    }
-
-    public Throwable throwing(String mes) {
-        swingAction.displayError("Ошибка", mes);
-        return new Throwable();
+    public UserException(String mes) {
+        super(mes);
+        JOptionPane.showMessageDialog(null, mes, "Ошибка пользователя", JOptionPane.ERROR_MESSAGE);
     }
 }

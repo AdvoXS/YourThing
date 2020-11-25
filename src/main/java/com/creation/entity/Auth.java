@@ -4,7 +4,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Auth {
-    boolean isOperator;
 
     User owner;
 
@@ -33,11 +32,5 @@ public class Auth {
         this.token = token;
     }
 
-    public boolean isOperator() {
-        return isOperator;
-    }
 
-    public void setOperator(boolean operator) {
-        isOperator = operator;
-    }
 }

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Application {
     public static void main(String[] args) {
+       // WebLookAndFeel.install();
         ApplicationContext context = new AnnotationConfigApplicationContext(SpringApplicationConfig.class);
         LoginFrame loginFrame = context.getBean(LoginFrame.class);
         loginFrame.setVisible(true);

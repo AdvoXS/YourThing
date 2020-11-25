@@ -1,8 +1,9 @@
 package com.creation.controller.spring.get;
 
+import com.creation.controller.spring.user.UserListSC;
 import com.creation.core.application.app.SpringApplicationConfig;
 import com.creation.entity.UsersList;
-import com.creation.service.AuthService;
+import com.creation.service.auth.UserAuthService;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,7 +25,7 @@ public class UserListSCTest {
     @Before
     public void getAuth() {
         con = new AnnotationConfigApplicationContext(SpringApplicationConfig.class);
-        AuthService service = con.getBean(AuthService.class);
+        UserAuthService service = con.getBean(UserAuthService.class);
         service.initAuth("operator@test.ru", "12345678");
     }
 

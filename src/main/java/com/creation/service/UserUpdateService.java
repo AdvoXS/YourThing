@@ -1,6 +1,6 @@
 package com.creation.service;
 
-import com.creation.controller.spring.patch.UserUpdateSC;
+import com.creation.controller.spring.user.UserUpdateSC;
 import com.creation.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
