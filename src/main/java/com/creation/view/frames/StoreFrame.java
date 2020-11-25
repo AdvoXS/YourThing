@@ -2,9 +2,9 @@ package com.creation.view.frames;
 
 import javax.swing.*;
 
-public class GoodFrame {
+public class StoreFrame {
     private JButton связатьсяButton;
+    private JButton профильButton;
     private JButton изменитьButton;
-    private JTextArea textArea2;
-    private JTextField textField1;
+    private JButton добавитьТоварButton;
 }

@@ -43,6 +43,11 @@ public class ProfileFrame extends AbstractFrame {
     private JLabel emailEditF;
     private JButton editAvaButton;
     private JPanel editAvaPanel;
+    private JTextField textField4;
+    private JTextField textField5;
+    private JTextField textField6;
+    private JTextArea textArea1;
+    private JTextArea textArea2;
 
     public ProfileFrame() {
         setTitle("Your Things");
