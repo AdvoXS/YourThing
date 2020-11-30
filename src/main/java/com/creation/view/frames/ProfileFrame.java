@@ -1,6 +1,8 @@
 package com.creation.view.frames;
 
+import com.creation.core.application.UserException;
 import com.creation.entity.User;
+import com.creation.service.admin.UserBecomeSellerService;
 import com.creation.service.user.UserUpdateService;
 import com.creation.view.core.SwingAction;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,18 +49,19 @@ public class ProfileFrame extends AbstractFrame {
     private JTextField textField5;
     private JTextField textField6;
     private JTextArea textArea1;
-    private JTextArea textArea2;
+    private JButton becomeSellerButton;
 
     public ProfileFrame() {
         setTitle("Your Things");
         setContentPane(ProfilePanel);
-        setPreferredSize(new Dimension(600, 500));
+        setPreferredSize(new Dimension(600, 800));
         pack();
     }
 
     static {
 
     }
+
     private void createUIComponents() {
         setsCloseButton();
         setsEditButton();
@@ -75,6 +78,9 @@ public class ProfileFrame extends AbstractFrame {
         firstNameInfo = new JLabel();
         secondNameInfo = new JLabel();
         emailInfo = new JLabel();
+
+        setBecomeSellerButton();
+
         // TODO: place custom component creation code here
     }
 
@@ -83,6 +89,20 @@ public class ProfileFrame extends AbstractFrame {
         updateInfo();
     }
 
+
+    private void setBecomeSellerButton() {
+        String mes = "Вы действительно хотите стать продавцом?\nАвтоматически отправится заявка на одобрение.";
+        becomeSellerButton = new JButton();
+        becomeSellerButton.addActionListener(e -> {
+            if (JOptionPane.showConfirmDialog(this, mes) == 0) {
+                if (con.getBean(UserBecomeSellerService.class).become()) {
+                    JOptionPane.showMessageDialog(this, "Заявка успешно отправлена", "Информация", JOptionPane.INFORMATION_MESSAGE);
+                    becomeSellerButton.setVisible(false);
+                    setNotEdit();
+                } else throw new UserException("Не удалось отправить заявку. Обратитесь к разработчику");
+            }
+        });
+    }
 
     private void updateInfo() {
         textField1.setText(user.getFirst_name());
