@@ -65,7 +65,7 @@ public class RegisterFrame extends AbstractFrame {
 
     private void backToLogin() {
         LoginFrame lf = context.getBean(LoginFrame.class);
-        if (StringUtils.isEmpty(textField1.getText()))
+        if (!StringUtils.isEmpty(textField1.getText()))
             lf.setEMail(textField1.getText());
         lf.setVisible(true);
         this.setVisible(false);
