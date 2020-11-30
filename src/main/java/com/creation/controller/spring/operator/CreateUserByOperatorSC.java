@@ -1,11 +1,6 @@
 package com.creation.controller.spring.operator;
 
-import com.creation.controller.spring.SController;
 import com.creation.core.application.Rests;
-import com.creation.entity.Auth;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Controller;
@@ -27,8 +22,8 @@ public class CreateUserByOperatorSC extends OperatorSC {
                 .body(Mono.just(
                         "{" +
                                 "\"email\": \"" + email + "\",\n" +
-                                "\"first_name\": \"" + pass + "\",\n" +
-                                "\"last_name\": \"" + doublePass + "\"" +
+                                "\"password\": \"" + pass + "\",\n" +
+                                "\"password_confirmation\": \"" + doublePass + "\"" +
                                 "}"), String.class).exchange().flatMap(clientResponse -> {
                     if (clientResponse.statusCode().isError()) {
                         return clientResponse.createException().flatMap(Mono::error);

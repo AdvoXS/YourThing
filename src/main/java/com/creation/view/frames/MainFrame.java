@@ -172,6 +172,9 @@ public class MainFrame extends JFrame {
     private void setControlPanel() {
         controlPanel = new JPanel();
         controlAddButton = new JButton();
+        controlAddButton.addActionListener(e -> {
+            con.getBean(AddProfile.class).setVisible(true);
+        });
         deleteButton = new JButton();
         deleteButton.addActionListener(e -> {
             if (viewTable.getSelectedRow() != -1) {
