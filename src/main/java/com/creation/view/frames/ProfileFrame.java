@@ -11,6 +11,8 @@ import org.springframework.stereotype.Component;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 import java.util.HashMap;
 
 @Component
@@ -78,7 +80,7 @@ public class ProfileFrame extends AbstractFrame {
         firstNameInfo = new JLabel();
         secondNameInfo = new JLabel();
         emailInfo = new JLabel();
-
+        setPrimarySettings();
         setBecomeSellerButton();
 
         // TODO: place custom component creation code here
@@ -89,6 +91,19 @@ public class ProfileFrame extends AbstractFrame {
         updateInfo();
     }
 
+    private void setPrimarySettings() {
+        addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentHidden(ComponentEvent e) {
+                setNotEdit();
+            }
+
+            @Override
+            public void componentShown(ComponentEvent e) {
+                setNotEdit();
+            }
+        });
+    }
 
     private void setBecomeSellerButton() {
         String mes = "Вы действительно хотите стать продавцом?\nАвтоматически отправится заявка на одобрение.";
