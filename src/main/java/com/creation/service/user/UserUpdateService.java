@@ -1,4 +1,4 @@
-package com.creation.service;
+package com.creation.service.user;
 
 import com.creation.controller.spring.user.UserUpdateSC;
 import com.creation.entity.User;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.HashMap;
 
 @Service
-public class UserUpdateService {
+public class UserUpdateService extends UserService{
     @Autowired
     UserUpdateSC contr;
 

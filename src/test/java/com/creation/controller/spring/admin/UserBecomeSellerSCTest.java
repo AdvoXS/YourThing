@@ -1,6 +1,6 @@
 package com.creation.controller.spring.admin;
 
-import com.creation.controller.spring.role.RoleSC;
+import com.creation.controller.spring.role.GetRoleSC;
 import com.creation.core.application.app.SpringApplicationConfig;
 import com.creation.entity.Auth;
 import org.junit.BeforeClass;
@@ -17,7 +17,7 @@ public class UserBecomeSellerSCTest {
     UserBecomeSellerSC contr;
 
     @Autowired
-    RoleSC roleSC;
+    GetRoleSC getRoleSC;
 
     @Autowired
     Auth auth;

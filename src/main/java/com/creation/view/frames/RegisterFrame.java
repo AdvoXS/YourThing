@@ -1,6 +1,6 @@
 package com.creation.view.frames;
 
-import com.creation.service.RegService;
+import com.creation.service.user.RegService;
 import com.creation.view.core.SwingProps;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;

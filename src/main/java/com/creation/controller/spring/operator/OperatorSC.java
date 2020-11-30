@@ -1,4 +1,4 @@
-package com.creation.controller.spring.role;
+package com.creation.controller.spring.operator;
 
 import com.creation.controller.spring.SController;
 import com.creation.entity.Auth;
@@ -10,14 +10,12 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 @Lazy
-public class RoleSC extends SController {
-
-    Logger logger = LogManager.getLogger(RoleSC.class.getSimpleName());
-
+public class OperatorSC extends SController {
     @Autowired
     Auth auth;
+    Logger logger = LogManager.getLogger(CreateUserByOperatorSC.class.getSimpleName());
 
     protected void error(String error) {
-        logger.error("Failed get role(s) user... " + error);
+        logger.error("Failed registration... " + error);
     }
 }

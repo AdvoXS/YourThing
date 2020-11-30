@@ -1,7 +1,7 @@
 package com.creation.service.auth;
 
 import com.creation.controller.spring.login.UserLoginSC;
-import com.creation.controller.spring.role.RoleSC;
+import com.creation.controller.spring.role.GetRoleSC;
 import com.creation.entity.Auth;
 import com.creation.entity.Role;
 import org.apache.logging.log4j.LogManager;
@@ -32,9 +32,9 @@ public class UserAuthService extends AuthService {
 
 
     private void setRole() {
-        RoleSC roleSC = con.getBean(RoleSC.class);
+        GetRoleSC getRoleSC = con.getBean(GetRoleSC.class);
         Auth auth = con.getBean(Auth.class);
-        Role role = roleSC.geRole(auth.getUser().getId());
+        Role role = getRoleSC.geRole(auth.getUser().getId());
         if (role != null) auth.getUser().setRole(Role.SELLER);
     }
 }

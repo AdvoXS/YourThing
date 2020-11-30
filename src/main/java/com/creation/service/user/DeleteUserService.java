@@ -1,4 +1,4 @@
-package com.creation.service;
+package com.creation.service.user;
 
 import com.creation.controller.spring.user.DeleteUserSC;
 import com.creation.entity.Auth;
@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DeleteUserService {
+public class DeleteUserService extends UserService{
     @Autowired
     DeleteUserSC contr;
     @Autowired

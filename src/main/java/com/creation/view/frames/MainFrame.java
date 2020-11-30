@@ -3,8 +3,8 @@ package com.creation.view.frames;
 import com.creation.entity.Auth;
 import com.creation.entity.Role;
 import com.creation.entity.User;
-import com.creation.service.DeleteUserService;
-import com.creation.service.UserListService;
+import com.creation.service.user.DeleteUserService;
+import com.creation.service.user.UserListService;
 import com.creation.view.core.SwingAction;
 import com.creation.view.core.SwingProps;
 import com.creation.view.elements.HTextField;
@@ -163,6 +163,9 @@ public class MainFrame extends JFrame {
                     filterUserPanel.setVisible(false);
                     break;
             }
+        });
+        marketButton.addActionListener(e->{
+            con.getBean(StoreFrame.class).setVisible(true);
         });
     }
 

@@ -1,36 +1,28 @@
-package com.creation.controller.spring.role;
+package com.creation.controller.spring.shop;
 
-import com.creation.controller.spring.SController;
 import com.creation.core.application.Rests;
-import com.creation.entity.Auth;
-import com.creation.entity.RolesList;
-import com.google.gson.Gson;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import reactor.core.publisher.Mono;
+
 @Controller
 @Lazy
-public class RoleListSC extends RoleSC {
+public class UpdateShopSC extends ShopSC{
 
-    @Autowired
-    RolesList roles;
-
-    Logger logger = LogManager.getLogger(RoleListSC.class.getSimpleName());
-
-    public RolesList getRoleList() {
+    public boolean updateShop(int id,String name) {
         Mono<String> authMono = webClient
-                .method(HttpMethod.GET)
-                .uri("/users/user_role")
+                .method(HttpMethod.PATCH)
+                .uri("/admins/" + id)
                 .headers(headers -> {
                     headers.set(Rests.CONTENT_TYPE, Rests.APPLICATION_JSON_VALUE);
                     headers.set(Rests.X_ACCESS_TOKEN, auth.getToken());
                 })
-                .exchange().flatMap(clientResponse -> {
+                .body(Mono.just(
+                        "{" +
+                                "\"name\": \"" + name + "\",\n" +
+                                "}"), String.class).exchange().flatMap(clientResponse -> {
                     if (clientResponse.statusCode().isError()) {
                         return clientResponse.createException().flatMap(Mono::error);
                     }
@@ -39,15 +31,12 @@ public class RoleListSC extends RoleSC {
         return getResult(authMono);
     }
 
-    private RolesList getResult(Mono<String> authMono) {
+    protected boolean getResult(Mono<String> authMono) {
         String result = authMono.block();
         if (!StringUtils.isEmpty(result) && result.contains("Error")) {
             error(result);
-            return null;
-        } else {
-            roles = new Gson().fromJson(result, RolesList.class);
-        }
-        return roles;
+            return false;
+        } else
+            return true;
     }
-
 }

@@ -15,7 +15,7 @@ public class AdminListService extends AdminService{
     @Autowired
     AdminListSC contr;
 
-    private ArrayList<User> getUsers() {
+    public ArrayList<User> getUsers() {
         if (auth.getUser().getRole().equals(Role.OPERATOR)) {
             return contr.getList().getUserList();
         } else

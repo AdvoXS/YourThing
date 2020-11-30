@@ -1,4 +1,4 @@
-package com.creation.service;
+package com.creation.service.user;
 
 import com.creation.controller.spring.operator.CreateUserByOperatorSC;
 import com.creation.entity.Auth;
@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CreateUserService {
+public class CreateUserService extends UserService{
     @Autowired
     CreateUserByOperatorSC contr;
     @Autowired

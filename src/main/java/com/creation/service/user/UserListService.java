@@ -1,4 +1,4 @@
-package com.creation.service;
+package com.creation.service.user;
 
 import com.creation.controller.spring.user.UserListSC;
 import com.creation.core.application.UserException;
@@ -14,7 +14,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 @Service
-public class UserListService {
+public class UserListService extends UserService{
     @Autowired
     ApplicationContext con;
 

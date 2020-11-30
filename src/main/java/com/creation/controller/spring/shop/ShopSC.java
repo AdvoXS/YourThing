@@ -1,4 +1,4 @@
-package com.creation.controller.spring.role;
+package com.creation.controller.spring.shop;
 
 import com.creation.controller.spring.SController;
 import com.creation.entity.Auth;
@@ -10,14 +10,13 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 @Lazy
-public class RoleSC extends SController {
-
-    Logger logger = LogManager.getLogger(RoleSC.class.getSimpleName());
+public class ShopSC extends SController {
+    Logger logger = LogManager.getLogger(ShopSC.class.getSimpleName());
 
     @Autowired
     Auth auth;
 
     protected void error(String error) {
-        logger.error("Failed get role(s) user... " + error);
+        logger.error(error);
     }
 }

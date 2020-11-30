@@ -14,10 +14,7 @@ import reactor.core.publisher.Mono;
 
 @Controller
 @Lazy
-public class CreateUserByOperatorSC extends SController {
-    @Autowired
-    Auth auth;
-    Logger logger = LogManager.getLogger(CreateUserByOperatorSC.class.getSimpleName());
+public class CreateUserByOperatorSC extends OperatorSC {
 
     public boolean createUser(String email, String pass, String doublePass) {
         Mono<String> authMono = webClient
@@ -48,9 +45,5 @@ public class CreateUserByOperatorSC extends SController {
             return false;
         } else
             return true;
-    }
-
-    private void error(String error) {
-        logger.error("Failed registration... " + error);
     }
 }

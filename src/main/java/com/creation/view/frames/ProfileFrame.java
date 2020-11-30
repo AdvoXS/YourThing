@@ -1,7 +1,7 @@
 package com.creation.view.frames;
 
 import com.creation.entity.User;
-import com.creation.service.UserUpdateService;
+import com.creation.service.user.UserUpdateService;
 import com.creation.view.core.SwingAction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
