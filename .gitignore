@@ -24,6 +24,8 @@
 *.iml
 *.iws
 =======
+# PVS
+.PVS-Studio/
 
 # User-specific stuff
 .idea/**/workspace.xml

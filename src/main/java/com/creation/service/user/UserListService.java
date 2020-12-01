@@ -39,9 +39,9 @@ public class UserListService extends UserService{
     }
 
     public ArrayList<User> filterUser(String name, String sName, String mail) {
-        Predicate<User> namePred = s -> s.getFirst_name() != null && name != null && s.getFirst_name().contains(name);
-        Predicate<User> sNamePred = s -> s.getLast_name() != null && sName != null && s.getLast_name().contains(sName);
-        Predicate<User> mailPred = s -> s.getEmail() != null && mail != null && s.getEmail().contains(mail);
+        Predicate<User> namePred = s -> s.getFirst_name() != null && name != null && s.getFirst_name().toUpperCase().contains(name.toUpperCase());
+        Predicate<User> sNamePred = s -> s.getLast_name() != null && sName != null && s.getLast_name().toUpperCase().contains(sName.toUpperCase());
+        Predicate<User> mailPred = s -> s.getEmail() != null && mail != null && s.getEmail().toUpperCase().contains(mail.toUpperCase());
         return (ArrayList<User>) getUsers().stream().filter(namePred.and(sNamePred).and(mailPred)).collect(Collectors.toList());
     }
 

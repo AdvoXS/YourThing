@@ -75,6 +75,7 @@ public class MainFrame extends JFrame {
     private JTextField filterUserMailField;
     private JButton deleteButton;
     private JPanel deprecatePanel;
+    private JButton notificationButton;
 
     {
         salerComponents = new HashSet<>();
@@ -164,9 +165,10 @@ public class MainFrame extends JFrame {
                     break;
             }
         });
-        marketButton.addActionListener(e->{
+        marketButton.addActionListener(e -> {
             con.getBean(StoreFrame.class).setVisible(true);
         });
+        notificationButton = new JButton();
     }
 
     private void setControlPanel() {
@@ -212,6 +214,7 @@ public class MainFrame extends JFrame {
         filterUserMailField = new JTextField();
         setFilterTextField(filterUserMailField);
         filterUserMailField.setName("filterUserMailField");
+
     }
 
     private void setFilterTextField(JTextField filterField) {
@@ -229,7 +232,8 @@ public class MainFrame extends JFrame {
             }
 
             private void doIt() {
-                if (StringUtils.isEmpty(filterField.getText())) viewUsersTable();
+                if (StringUtils.isEmpty(filterUserField.getText()) && StringUtils.isEmpty(filterUserSNameField.getText()) && StringUtils.isEmpty(filterUserMailField.getText()))
+                    viewUsersTable();
                 else {
                     UserListService service = con.getBean(UserListService.class);
                     viewTable.fillTable(service.filterUser(filterUserField.getText(), filterUserSNameField.getText(), filterUserMailField.getText()));
